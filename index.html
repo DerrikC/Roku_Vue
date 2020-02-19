@@ -50,6 +50,38 @@
       </div>
     </header>
 
+    <section class="hidden-movies" :class="{ 'show-movie' : showDetails} "> <!--hidden-movies-->
+     
+      <div class="video-overlay"></div>
+      <h3 class="movie-title">{{videotitle}}</h3>
+      <div class="movie-details">
+        <p>{{videodescription}}</p>
+      </div>
+      <div class="movie-socialBtns">
+          <ul>
+            <li><img src="images/comment-btn.svg" alt="comment"></li>
+            <li><img src="images/like-btn.svg" alt="like"></li>
+            <li><img src="images/share-btn.svg" alt="share"> </li>
+          </ul>
+      </div>
+    
+      <video :src="'video/' + vidsource" controls autoplay></video>
+    </section>
+
+
+    <div class="decade-nav">
+    <ul>
+      <li>50s</li>
+      <li>60s</li>
+      <li>70s </li>
+      <li>80s</li>
+      <li>90s</li>
+    </ul>
+    </div>
+
+
+    </section>
+    <h1>Movies</h1>
     <ul class="video-poster-wrapper">
       <li v-for="movie in videodata">
         <a :href="movie.vidsource" @click.prevent="showMovieDetails(movie)">
@@ -58,19 +90,29 @@
       
       </li>
     </ul>
-
+    <h1>TV</h1>
+    <ul class="video-poster-wrapper">
+      <li v-for="movie in videodata">
+        <a :href="movie.vidsource" @click.prevent="showMovieDetails(movie)">
+          <img :src="'images/' + movie.thumb" alt="movie poster">
+        </a>
+      
+      </li>
+    </ul>
+    <h1>Music</h1>
+    <ul class="video-poster-wrapper">
+      <li v-for="movie in videodata">
+        <a :href="movie.vidsource" @click.prevent="showMovieDetails(movie)">
+          <img :src="'images/' + movie.thumb" alt="movie poster">
+        </a>
+      
+      </li>
+    </ul>
     <p class="instructions">
       <i>Click on a poster to preview the movie!</i>
     </p>
 
-    <section class="hidden-movies" :class="{ 'show-movie' : showDetails} "> <!--hidden-movies-->
-      <h3 class="movie-title">{{videotitle}}</h3>
-      <video :src="'video/' + vidsource" controls autoplay></video>
-      <div class="movie-details">
-        <p>{{videodescription}}</p>
-      </div>
-    </section>
-
+    
     <div class="up-arrow"><span>^</span></div>
   </main>
 
