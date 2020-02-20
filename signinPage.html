@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <link rel="stylesheet" href="css/main.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet"> 
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script> -->
   <title>Video with Vue</title>
 </head>
@@ -24,22 +26,24 @@
 
     <div class="signInForm">
       
-        <label for="Email or Phone Number">Username:</label>
+        <label for="Email or Phone Number">*Username</label>
+        <br>
         <input type="text" id="username" name="username" placeholder="Email or phone number">
-    </div>
+  
     
     <div>
-        <label for="pass">Password (8 characters minimum):</label>
+        <label for="pass">*Password</label>
+        <br>
         <input type="password" id="pass" name="password" placeholder="Password"
                minlength="8" required>
     </div>
     
-    <input type="submit" value="Sign in">
-
+    <input class="signBtn" type="submit" value="Sign in">
+    <br>
     <button>Sign Up</button>
     <button>Forgot Password?</button>
     </div>
-
+   </div>
 
   </main>
 
