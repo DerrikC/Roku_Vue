@@ -1,1 +1,38 @@
+@import '_vars';
+ 
+ #signIn h1 {
+    color: $roku-darkGrey;
+}
+
+.signInForm {
+    width: 200px;
+    margin: 0 auto;
+    padding: 45px;
+}
+
+main #signIn{
+    background-color: white;
+}
+
+#app {
+        background: rgb(107,63,149);
+        background: radial-gradient(circle, rgba(107,63,149,1) 0%, rgba(18,12,23,1) 100%);
+        color: #333;
+}
+
+input {
+    background-color: #ECEBEB;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px; 
+    width: 100%;;
+}
+
+ .signBtn {
+    background-color: #5E3687;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    width: 220px;
+}
 
