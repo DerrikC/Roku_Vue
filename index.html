@@ -17,9 +17,22 @@
   <main id="app">
     <header>
       <h1 class="hidden">Video with Vue.js</h1>
+      
+      <section class="hook-vid-cont">
+      
+        <!-- <div class="logo">
+          <a href="signinPage.html"><img class="rokuLogo" src="images/flashback-logo.svg" alt="flashback-logo"></a> 
+        </div> -->
       <nav>
 
+      
+        <a class="brand" href="signinPage.html"><img class="rokuLogo" src="images/flashback-logo.svg" alt="flashback-logo"></a> 
+        <!-- <a class="link" href="#"></a>
+        <a class="link" href="#">projects</a>
+     -->
+
         <!-- <h3 class="app-title">ROKU Flashback</h3> -->
+
 
         <ul>
           <!-- avatar / user icon-->
@@ -47,47 +60,50 @@
           </li>
         </ul>
       </nav>
-      <div class="logo">
-        <a href="signinPage.html"><img class="rokuLogo" src="images/flashback-logo.svg" alt="flashback-logo"></a> 
-      </div>
+  
     </header>
 
+    <div class="video-overlay"></div>
     <section class="hidden-movies" :class="{ 'show-movie' : showDetails} "> <!--hidden-movies-->
      
-      <div class="video-overlay"></div>
+    
       <h3 class="movie-title">{{videotitle}}</h3>
       <div class="movie-details">
         <p>{{videodescription}}</p>
       </div>
-      <div class="movie-socialBtns">
+      <!-- <div class="movie-socialBtns">
+        <p>ICONS!!?Need to import from database</p>
           <ul>
             <li><img src="images/comment-btn.svg" alt="comment"></li>
             <li><img src="images/like-btn.svg" alt="like"></li>
             <li><img src="images/share-btn.svg" alt="share"> </li>
           </ul>
-      </div>
+      </div> -->
     
       <video :src="'video/' + vidsource" controls autoplay></video>
+      <!-- <video :src="'video/' + vidsource" controls autoplay></video> -->
     </section>
 
+   
 
     <div class="decade-nav">
     <ul>
-      <li><a href="#" >50s</a></li>
-      <li><a href="#" >60s</a></li>
-      <li><a href="#" >70s</a></li>
-      <li><a href="#" >80s</a></li>
-      <li><a href="#" >90s</a></li>
+      <li><a href="#" class="underline" >50s</a></li>
+      <li><a href="#" class="underline" >60s</a></li>
+      <li><a href="#" class="underline">70s</a></li>
+      <li><a href="#" class="underline">80s</a></li>
+      <li><a href="#" class="underline">90s</a></li>
     </ul>
     </div>
+  </section>
 
-
+    <div class="content-gallery">
     </section>
     <h1>Movies</h1>
     <ul class="video-poster-wrapper">
       <li v-for="movie in videodata">
         <a :href="movie.vidsource" @click.prevent="showMovieDetails(movie)">
-          <img :src="'images/' + movie.thumb" alt="movie poster">
+          <img class="poster" :src="'images/' + movie.thumb" alt="movie poster">
         </a>
       
       </li>
@@ -96,7 +112,7 @@
     <ul class="video-poster-wrapper">
       <li v-for="movie in videodata">
         <a :href="movie.vidsource" @click.prevent="showMovieDetails(movie)">
-          <img :src="'images/' + movie.thumb" alt="movie poster">
+          <img class="poster" :src="'images/' + movie.thumb" alt="movie poster">
         </a>
       
       </li>
@@ -107,7 +123,7 @@
         <!-- mouseover option for trailers
         I want to enable a click that plays the video on an independent content player -->
         <a :href="movie.vidsource" @mouseover.prevent="showMovieDetails(movie)">
-          <img :src="'images/' + movie.thumb" alt="movie poster">
+          <img class="poster" :src="'images/' + movie.thumb" alt="movie poster">
         </a>
       
       </li>
@@ -116,7 +132,7 @@
       Goal: Hover posters fror preview, click to view movie with vue.js
     </p>
 
-    
+  </div>
     <div class="up-arrow"><span>^</span></div>
   </main>
 

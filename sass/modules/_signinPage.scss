@@ -1,18 +1,27 @@
 @import '_vars';
  
+
+
+
+
  #signIn h1 {
     color: $roku-darkGrey;
+    margin-top: 25px;
+    padding: 22px;
+    font-size: .75rem;
 }
 
+
 .signInForm {
-    width: 200px;
+    width: 225px;
     margin: 0 auto;
-    padding: 45px;
+    // padding: 25px;
 }
 
 main #signIn{
     background-color: white;
 }
+
 
 #app {
         background: rgb(107,63,149);
@@ -20,18 +29,20 @@ main #signIn{
         color: #333;
 }
 
+
 input {
     background-color: #ECEBEB;
     padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
-    margin: 10px; 
-    width: 100%;;
+    width: 200px;
 }
 
  .signBtn {
     background-color: #5E3687;
     padding: 10px;
-    margin: 10px;
+    margin-top: 15px;
     color: white;
     width: 220px;
 }
