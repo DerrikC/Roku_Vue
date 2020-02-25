@@ -1,4 +1,4 @@
-![roku Logo](../images/roku_Readme.svg)
+![rokuLogo](images/roku_Readme.svg)
 # ROKU Flashback Assignment
 
 ## Description
