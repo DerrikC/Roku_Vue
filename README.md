@@ -1,7 +1,7 @@
 ![rokuLogo](images/roku_Readme.svg)
 
 # ROKU Flashback Assignment
-![rokuMobile](images/mobile_rokuflashback_design.jpg)
+![rokuMobile](images/mobile_rokuflashback_design-1.png)
 ## Description
 An audio and video app that uses queries and database assets. The user will be able to login and select either a parent section or a kids section, each with a unique theme. The parent section will require a password. Some content will be organized based on ratings and priveleges. 
 
