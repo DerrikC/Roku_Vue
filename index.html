@@ -20,19 +20,11 @@
       
       <section class="hook-vid-cont">
       
-        <!-- <div class="logo">
-          <a href="signinPage.html"><img class="rokuLogo" src="images/flashback-logo.svg" alt="flashback-logo"></a> 
-        </div> -->
       <nav>
-
-      
         <a class="brand" href="signinPage.html"><img class="rokuLogo" src="images/flashback-logo.svg" alt="flashback-logo"></a> 
         <!-- <a class="link" href="#"></a>
         <a class="link" href="#">projects</a>
      -->
-
-        <!-- <h3 class="app-title">ROKU Flashback</h3> -->
-
 
         <ul>
           <!-- avatar / user icon-->
@@ -43,7 +35,7 @@
 
           <!-- else show this -->
           <li v-else>
-            <i class="fas fa-user"></i>
+            <i class="fas fa-user" ></i>
           </li>
           <!-- end avatar -->
 
@@ -66,11 +58,12 @@
     <div class="video-overlay"></div>
     <section class="hidden-movies" :class="{ 'show-movie' : showDetails} "> <!--hidden-movies-->
      
-    
+   
       <h3 class="movie-title">{{videotitle}}</h3>
       <div class="movie-details">
         <p>{{videodescription}}</p>
       </div>
+      <div class="movie-cont">
       <!-- <div class="movie-socialBtns">
         <p>ICONS!!?Need to import from database</p>
           <ul>
@@ -82,14 +75,15 @@
     
       <video :src="'video/' + vidsource" controls autoplay></video>
       <!-- <video :src="'video/' + vidsource" controls autoplay></video> -->
+    </div>
     </section>
 
    
 
     <div class="decade-nav">
     <ul>
-      <li><a href="#" class="underline" >50s</a></li>
-      <li><a href="#" class="underline" >60s</a></li>
+      <li><a href="#" class="underline">50s</a></li>
+      <li><a href="#" class="underline">60s</a></li>
       <li><a href="#" class="underline">70s</a></li>
       <li><a href="#" class="underline">80s</a></li>
       <li><a href="#" class="underline">90s</a></li>

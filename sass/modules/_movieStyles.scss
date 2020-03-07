@@ -1,27 +1,4 @@
-
-.video-overlay {
-  position: absolute;
-  background: rgb(19,15,23);
-  background: linear-gradient(90deg, rgba(19,15,23,1) 13%, rgba(36,24,47,1) 21%, rgba(65,41,88,0.9353464533773701) 27%, rgba(94,55,130,0.5645599365234375) 35%, rgba(107,63,149,0) 66%);
-  z-index: 1;
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  height: 315px;
-  display: block;
-  margin-top:-115px;
-  position: fixed;
-
-}
-
-// .hidden-movies {
-//   display: flex;
-//   width: 100%;
-//   margin: 0 auto;
-//   overflow: hidden;
-//   transition: all 0.7s;
-//   max-height: 0;
-//  }
+//Hook movies at the top 
 
  .show-movie { max-height: 800px; }
 
@@ -74,6 +51,3 @@
   z-index: 3;
 }
 
-// .vid-cont {
-  
-// }
