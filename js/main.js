@@ -14,9 +14,12 @@ var vm = new Vue({
 
     // this data would also come from the database, but we'll just mock it up for now
     videodata: [
-      { name: "Star Wars The Force Awakens", thumb: "forceawakens.jpg", vidsource: "forceawakens.mp4", description: "yet another star wars movie" },
-      { name: "Stranger Things", thumb: "strangerthings.jpg", vidsource: "strangerthings.mp4", description: "don't get lost in the upside down" },
-      { name: "Marvel's The Avengers", thumb: "avengers.jpg", vidsource: "avengers.mp4", description: "will they make black widow action figures this time?" }
+      { name: "Pulp Fiction", thumb: "pulpfiction.jpg", vidsource: "pulpfiction.mp4", description: "A Quentin Tarantino Classic." },
+      // { name: "Star Wars The Force Awakens", thumb: "forceawakens.jpg", vidsource: "forceawakens.mp4", description: "yet another star wars movie" },
+      // { name: "Stranger Things", thumb: "strangerthings.jpg", vidsource: "strangerthings.mp4", description: "don't get lost in the upside down" },
+      // { name: "Marvel's The Avengers", thumb: "avengers.jpg", vidsource: "avengers.mp4", description: "will they make black widow action figures this time?" },
+      { name: "Titanic", thumb: "titanic.jpg", vidsource: "titanic.mp4", description: "Rose falls in love with an artist by the name of Jack." },
+      { name: "Forest Gump", thumb: "forestgump.jpg", vidsource: "forestgump.mp4", description: "Run Forest, Run! A classic Tom Hanks film for the family." }
     ],
 
     videotitle: "video title goes here",
