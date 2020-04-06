@@ -9,6 +9,14 @@
 /*-------------------------------Mobile-------------------------------*/
 @media (max-width:445px) {
 
+    .container {
+        margin-top: 50px;
+    }
+
+    #app {
+        background-color: white;
+    }
+
     html, body {
         height: 100%;
     }
@@ -45,11 +53,11 @@
     header{ 
         position: absolute;
         width: 100%;
-        background-color: none; 
+        background-color: white; 
         color:black; 
-        -webkit-box-shadow: 0 6px 4px -4px gray;
-        -moz-box-shadow: 0 6px 4px -4px gray;
-        box-shadow: 0 6px 4px -4px gray;
+        -webkit-box-shadow: 0 6px 4px -4px black;
+        -moz-box-shadow: 0 6px 4px -4px black;
+        box-shadow: 0 6px 4px -4px black;
         z-index: 4;
     }
     
@@ -259,6 +267,11 @@
 /*-------------------------------Tablet-------------------------------*/
 @media (max-width:768px) and (min-width: 446px){
 
+
+    .container {
+        margin-top: 50px;
+    }
+
     html, body {
         height: 100%;
     }
@@ -295,11 +308,11 @@
     header{ 
         position: absolute;
         width: 100%;
-        background-color: none; 
+        background-color: white;
         color:black; 
-        -webkit-box-shadow: 0 6px 4px -4px gray;
-        -moz-box-shadow: 0 6px 4px -4px gray;
-        box-shadow: 0 6px 4px -4px gray;
+        -webkit-box-shadow: 0 6px 4px -4px black;
+        -moz-box-shadow: 0 6px 4px -4px black;
+        box-shadow: 0 6px 4px -4px black;
         z-index: 4;
     }
     
@@ -519,6 +532,11 @@
 /*-------------------------------Desktop------------------------------*/
 @media (min-width: 769px){
 
+
+        .container {
+        margin-top: 50px;
+        }
+
         html, body {
             height: 100%;
         }
@@ -555,11 +573,11 @@
         header{ 
             position: absolute;
             width: 100%;
-            background-color: none; 
+            background-color: white; 
             color:black; 
-            -webkit-box-shadow: 0 6px 4px -4px gray;
-            -moz-box-shadow: 0 6px 4px -4px gray;
-            box-shadow: 0 6px 4px -4px gray;
+            -webkit-box-shadow: 0 6px 4px -4px black;
+            -moz-box-shadow: 0 6px 4px -4px black;
+            box-shadow: 0 6px 4px -4px black;
             z-index: 4;
         }
         
