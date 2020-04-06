@@ -15,14 +15,6 @@
 
 <body>
   <main id="signIn">
-    <header>
-   
-      <h1 class="hidden">Video with Vue.js</h1>
-      <div class="logo">
-          <img src="images/flashback-logo.svg" alt="flashback-logo">
-      </div>
-
-    </header>
 
 
     <h1>Sign In</h1>
@@ -32,17 +24,17 @@
       
         <label for="Email or Phone Number">*Username</label>
         <br>
-        <input type="text" id="username" name="username" placeholder="Email or phone number">
+        <input v-model="input.username" type="text" id="username" name="username" placeholder="Email or phone number">
   
     
     <div>
         <label for="pass">*Password</label>
         <br>
-        <input type="password" id="pass" name="password" placeholder="Password"
+        <input v-model="input.username" type="password" id="pass" name="password" placeholder="Password"
                minlength="8" required>
     </div>
     
-    <input class="signBtn" type="submit" value="Sign in">
+    <input v-on:click.prevent="login()" class="signBtn" type="submit" value="Sign in">
     <br>
     <button>Sign Up</button>
     <button>Forgot Password?</button>

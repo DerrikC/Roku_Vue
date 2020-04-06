@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet"> 
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script> -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <title>Video with Vue</title>
+</head>
+
+
+
+
+
+
+
+<body>
+  <main id="app">
+    <header>
+      <h1 class="hidden">Video with Vue.js</h1>
+      
+      <section class="hook-vid-cont">
+      
+      <nav>
+        <a class="brand" href="signinPage.html"><img class="rokuLogo" src="images/flashback-logo.svg" alt="flashback-logo"></a> 
+        <!-- <a class="link" href="#"></a>
+        <a class="link" href="#">projects</a>
+     -->
+
+        <ul>
+          <!-- avatar / user icon-->
+          <!-- if the user has an avatar, show it -->
+          <li v-if="user.avatar">
+            <img :src="'images/' + user.avatar" alt="user avatar" class="u-avatar">
+          </li>
+
+          <!-- else show this -->
+          <li v-else>
+            <i class="fas fa-user" ></i>
+          </li>
+          <!-- end avatar -->
+
+          <!-- settings icon / functionality -->
+          <!-- if our user object has admin rights, then show this -->
+          <li v-if="user.isAdmin">
+            <i v-on:click="setUserPrefs" class="fas fa-cog" role="button"></i>
+          </li>
+          <!-- end user settings -->
+
+          <!-- log in / log out -->
+          <li>
+            <i @click="userLogin" class="fas fa-power-off u-login" role="button" :class="{ 'logged-in' : user.isLoggedIn }"></i>
+          </li>
+        </ul>
+      </nav>
+  
+    </header>
+
+
+
+    <div class="video-overlay"></div>
+    <section class="hidden-movies" :class="{ 'show-movie' : showDetails} "> <!--hidden-movies-->
+     
+   
+      <h3 class="movie-title">{{videotitle}}</h3>
+      <div class="movie-details">
+        <p>{{videodescription}}</p>
+      </div>
+      <div class="movie-cont">
+      <!-- <div class="movie-socialBtns">
+        <p>ICONS!!?Need to import from database</p>
+          <ul>
+            <li><img src="images/comment-btn.svg" alt="comment"></li>
+            <li><img src="images/like-btn.svg" alt="like"></li>
+            <li><img src="images/share-btn.svg" alt="share"> </li>
+          </ul>
+      </div> -->
+    
+      <video :src="'video/' + vidsource" controls autoplay></video>
+      <!-- <video :src="'video/' + vidsource" controls autoplay></video> -->
+    </div>
+    </section>
+
+   
+
+    <div class="decade-nav">
+    <ul>
+      <li><a href="#" class="underline">50s</a></li>
+      <li><a href="#" class="underline">60s</a></li>
+      <li><a href="#" class="underline">70s</a></li>
+      <li><a href="#" class="underline">80s</a></li>
+      <li><a href="#" class="underline">90s</a></li>
+    </ul>
+    </div>
+  </section>
+
+    <div class="content-gallery">
+    </section>
+    <h1>Movies</h1>
+    <ul class="video-poster-wrapper">
+      <li v-for="movie in videodata">
+        <a :href="movie.vidsource" @click.prevent="showMovieDetails(movie)">
+          <img class="poster" :src="'images/' + movie.thumb" alt="movie poster">
+        </a>
+      
+      </li>
+    </ul>
+    <h1>TV</h1>
+    <ul class="video-poster-wrapper">
+      <li v-for="movie in videodata">
+        <a :href="movie.vidsource" @click.prevent="showMovieDetails(movie)">
+          <img class="poster" :src="'images/' + movie.thumb" alt="movie poster">
+        </a>
+      
+      </li>
+    </ul>
+    <h1>Music</h1>
+    <ul class="video-poster-wrapper">
+      <li v-for="movie in videodata">
+        <!-- mouseover option for trailers
+        I want to enable a click that plays the video on an independent content player -->
+        <a :href="movie.vidsource" @mouseover.prevent="showMovieDetails(movie)">
+          <img class="poster" :src="'images/' + movie.thumb" alt="movie poster">
+        </a>
+      
+      </li>
+    </ul>
+    <!-- <p class="instructions">
+      Goal: Hover posters fror preview, click to view movie with vue.js
+    </p> -->
+
+  </div>
+    <div class="up-arrow"><span>^</span></div>
+  </main>
+
+  <footer>
+    <p>All content &copy; 2020 Roku Flashback Concept</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.15/dist/vue.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/video.js"></script>
+</body>
+
+</html>
