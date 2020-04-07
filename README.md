@@ -25,15 +25,16 @@ Access the db_rokudata sql document in the 'database' folder.
 
 > Launch MAMP
 In another terminal:
-> create database db_rokudata;
+> create database db_movies_roku;
 > use db_rokudata;
->source [](drag and drop the the db_favthings files)
+>source [](drag and drop the the db_movies_roku files)
 
 ## Authors
 
 Contributors names and contact info
 
-* Campbell Derrik @DerrikC
+* Derrik Campbell @DerrikC
+* Graham Vickers @grahamvickers
 
 
 ## Version History
@@ -43,7 +44,7 @@ Contributors names and contact info
 
 ## License
 
-This project is licensed under the derrikxavier License - see the LICENSE.md file for details - (MIT is usually fine)
+MIT
 
 ## Acknowledgments
 
