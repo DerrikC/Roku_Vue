@@ -21,7 +21,7 @@ export default {
 
     methods: {
         navToUserHome() {
-            debugger;
+            // debugger;
 
             //send this user to its homepage and pass the user object to the homepage
             this.$router.push({ name: "home", params: { currentuser: this.liveuser }})

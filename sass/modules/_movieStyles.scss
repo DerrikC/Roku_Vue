@@ -1,3 +1,10 @@
+//posters and thumbnails
+.lowerGallery img {
+  width: 75px;
+  margin: 20px;
+  max-width: 500px;
+}
+
 //Hook movies at the top 
 
  .show-movie { max-height: 800px; }
@@ -15,7 +22,7 @@
   z-index: 2;
   position: fixed;
  }
-
+ 
 .movie-details {
   position: absolute;
   display: flex;
