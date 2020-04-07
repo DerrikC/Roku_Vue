@@ -8,7 +8,7 @@ export default {
     props: ['currentuser'],
 
     template: `
-    v<div class="container">
+    <div class="container">
         <component :is="this.activeComponent"></component>
 
         <!-- show media icons here -->
