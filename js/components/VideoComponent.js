@@ -7,16 +7,16 @@ export default {
     <div class="video-overlay"></div>
     <div class="video-overlay-back"></div>
     
-
+        <div class="infoCont">
         <div class="row">
-            <div class="col-12 order-2 order-md-1 col-md-3 media-container1">
+            <div class="col-7 order-2 order-md-1 col-md-5 media-container1">
                 <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
                 <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
                 <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
                 <span class="media-year">{{currentMediaDetails.movies_year}}</span>
 
             </div>
-    
+        </div>
            
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
                 <video autoplay muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
@@ -38,7 +38,7 @@ export default {
             <div class="col-12 col-sm-9">
                 <div class="thumb-wrapper clearfix">
                     <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" 
-                    alt="media thumb" @click="loadNewMovie(item)" class="img-thumbnail rounded float-left 
+                    alt="media thumb" @mouseover="loadNewMovie(item)" class="img-thumbnail rounded float-left 
                     media-thumb"> 
                 </div>
             </div>
@@ -88,6 +88,7 @@ export default {
 
         loadNewMovie(movie) {
             this.currentMediaDetails = movie;
-        }
+        },
+        
     }
 }

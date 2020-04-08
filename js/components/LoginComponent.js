@@ -23,9 +23,10 @@ export default {
     </div>
     
     <input v-on:click.prevent="login()" class="signBtn" type="submit" value="Sign in">
-    <br>
-    <button>Sign Up</button>
+   
+    <a href ="addUserForm.html"> <button> Add User </button></a>
     <button>Forgot Password?</button>
+    <router-link :to="{ name: 'add_user' }">Click here to access the Flashback create user form. </router-link>
 
     </div>
     </div>

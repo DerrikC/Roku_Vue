@@ -1,3 +1,6 @@
+
+//THIS FILE HAS ASSORTED GLOBAL CHANGES CURRENTLY
+
 .container {
   margin-top: 75px;
 }
@@ -39,11 +42,26 @@
   padding: 0;
 }
 
-.col-12.col-sm-9 {
-  max-width: 800px;
-  margin: 0 auto;
+// .col-12.col-sm-9 {
+//   max-width: 800px;
+//   margin: 0 auto;
+// }
+
+.row h4 {
+  color: white;
 }
 
+.row p {
+  color: white;
+}
+
+.infoCont {
+  max-height: 200px;
+}
+
+.card-body p {
+  color: black;
+}
 
 //Hook movies at the top 
 

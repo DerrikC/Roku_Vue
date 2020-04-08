@@ -16,6 +16,8 @@
 </head>
 <body>
   <main id="app">
+
+	
 	<div class="container-fluid">
 		<div class="row">
 			<header class="col-sm-12 fixed-top">
@@ -33,9 +35,13 @@
 	</div> <!-- end container fluid -->
 
 
-	
+
+
+
 	<!-- first thing in component templates should be a container -->
 	<router-view @authenticated="setAuthenticated"/>	
+
+	<!-- add user component -->
 
 	</main>
 
@@ -50,5 +56,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 	<script type="module" src="js/main.js"></script>
+	
+
 </body>
 </html>

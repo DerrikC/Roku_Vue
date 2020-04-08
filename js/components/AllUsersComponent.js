@@ -1,4 +1,6 @@
 import UserComponent from './UserComponent.js';
+// import router from "./components/Router.js";
+
 
 
 export default {
@@ -43,5 +45,13 @@ export default {
 
 	components: {
 		user: UserComponent
-	}
+	},
+
+
 }
+
+// (() => {
+//     const myVM = new Vue({
+//         router
+//     }).$mount("#app");
+// })()
