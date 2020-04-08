@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User Form | POST with Fetch</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+
+<body>
+    <main id="app">
+        <h1>Add a user</h1>
+        <router-view></router-view>
+        <router-link :to="{ name: 'add_user' }">Click here to access the Flashback form. </router-link>
+
+    </main>
+
+    <script src="js/app.js" type="module"></script>
+</body>
+
+</html>
