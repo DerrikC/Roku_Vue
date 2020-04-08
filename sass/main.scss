@@ -1,17 +1,19 @@
 /* quick reset */
 @import '_vars';
+@import 'modules/_loginPage';
+@import 'modules/_userPage';
+@import 'modules/_topNav';
+@import 'modules/_decadeNav';
 @import 'modules/_signinPage';
 @import 'modules/_userStyles';
-@import 'modules/movieStyles';
+@import 'modules/_movieStyles';
+@import 'modules/_footer';
 
 * { margin: 0; border: 0; padding: 0; }
 
 /*-------------------------------Mobile-------------------------------*/
 @media (max-width:445px) {
 
-    .container {
-        margin-top: 50px;
-    }
 
     #app {
         background-color: white;
@@ -50,17 +52,6 @@
     
     .hidden { display: none; }
     
-    header{ 
-        position: absolute;
-        width: 100%;
-        background-color: white; 
-        color:black; 
-        -webkit-box-shadow: 0 6px 4px -4px black;
-        -moz-box-shadow: 0 6px 4px -4px black;
-        box-shadow: 0 6px 4px -4px black;
-        z-index: 4;
-    }
-    
     .logo {
         max-width: 200px;
         width: 100px;
@@ -72,50 +63,9 @@
 
      li {
         text-decoration: none;
-      
       }
       
       
-      nav {
-        position: fixed;
-        align-items: flex-end;
-        justify-content: flex-end;
-        top: 0;
-        left: 0;
-        z-index: 9999;
-        width: 100%;
-        height: 50px;
-        display: flex;
-        line-height: 50px;
-      }
-      
-
-
-      nav img {
-        height: 10px;
-      }
-      
-      nav .brand {
-        flex: 1;
-        align-self: flex-start;
-        height: 50px;
-        margin-left: 10px;
-      }
-      
-      nav li {
-          float: left;
-          list-style: none;
-          padding: 5px; 
-      }
-
-    //   nav .link {
-    //     flex: 1;
-    //     max-width: max-content;
-    //     margin-right: 20px;
-    //   }
-      
-  
-
     .hook-vid-cont{
         position: fixed;
     }
@@ -127,46 +77,12 @@
        
     }
 
-    .decade-nav {
-        display: flex;
-        text-align: center;
-        margin: 0 auto;
-        // display: block;
-        margin-top: 200px;
-        background-color: white;
-        padding: 25px 0px 25px 0px;
-        width: 100%;
-        height: 25px;
-        -webkit-box-shadow: 0 6px 4px -4px black;
-        -moz-box-shadow: 0 6px 4px -4px black;
-        box-shadow: 0 6px 4px -4px black;
-        position: fixed;
-    }
 
     .content-gallery {
         margin-top: 300px;
     }
 
-    footer { 
-        width: 100%; 
-        flex-shrink: 0; 
-        text-align: center;
-        // padding: 10px; removes margin space
-        background-color: none; 
-        color:black; 
-        p { font-size: 0.8em; }
-    }
-    
-    // styles for nav layout
-    
-
-
-    .decade-nav ul { 
-        margin: 0 auto;
-    
-        li { display: inline-block; padding: 0 8px; }
-    }
-    
+ 
     .content-gallery ul { 
         margin: 0 auto;
     
@@ -225,15 +141,25 @@
         position: absolute;
         background: rgb(19,15,23);
         background: linear-gradient(90deg, rgba(19,15,23,1) 13%, rgba(36,24,47,1) 21%, rgba(65,41,88,0.9353464533773701) 27%, rgba(94,55,130,0.5645599365234375) 35%, rgba(107,63,149,0) 66%);
+        z-index: 3;
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        height: 275px;
+        display: block;
+        position: fixed;
+      }
+
+      .video-overlay-back {
+        position: absolute;
+        background-color: black;
         z-index: 1;
         display: flex;
         width: 100%;
         margin: 0 auto;
-        height: 315px;
+        height: 275px;
         display: block;
-        margin-top:-115px;
         position: fixed;
-      
       }
     
     video { 
@@ -241,11 +167,14 @@
         display: flex;
         margin-top: 0px;
         margin-left: 0px;
-        // width: 75%;
         height: 250px;
         position: fixed;
-    
+        right: 0;
+        z-index: 2;
     }
+
+
+    
     
     .instructions { padding-top: 30px; text-align: center; }
     
@@ -266,11 +195,6 @@
 }
 /*-------------------------------Tablet-------------------------------*/
 @media (max-width:768px) and (min-width: 446px){
-
-
-    .container {
-        margin-top: 50px;
-    }
 
     html, body {
         height: 100%;
@@ -304,18 +228,7 @@
     main { flex: 1 0 auto; }
     
     .hidden { display: none; }
-    
-    header{ 
-        position: absolute;
-        width: 100%;
-        background-color: white;
-        color:black; 
-        -webkit-box-shadow: 0 6px 4px -4px black;
-        -moz-box-shadow: 0 6px 4px -4px black;
-        box-shadow: 0 6px 4px -4px black;
-        z-index: 4;
-    }
-    
+
     .logo {
         max-width: 200px;
         width: 100px;
@@ -329,46 +242,6 @@
         text-decoration: none;
       
       }
-      
-      
-      nav {
-        position: fixed;
-        align-items: flex-end;
-        justify-content: flex-end;
-        top: 0;
-        left: 0;
-        z-index: 9999;
-        width: 100%;
-        height: 50px;
-        display: flex;
-        line-height: 50px;
-      }
-      
-
-
-      nav img {
-        height: 10px;
-      }
-      
-      nav .brand {
-        flex: 1;
-        align-self: flex-start;
-        height: 50px;
-        margin-left: 10px;
-      }
-      
-      nav li {
-          float: left;
-          list-style: none;
-          padding: 5px; 
-      }
-
-    //   nav .link {
-    //     flex: 1;
-    //     max-width: max-content;
-    //     margin-right: 20px;
-    //   }
-      
   
 
     .hook-vid-cont{
@@ -382,45 +255,11 @@
        
     }
 
-    .decade-nav {
-        display: flex;
-        text-align: center;
-        margin: 0 auto;
-        // display: block;
-        margin-top: 200px;
-        background-color: white;
-        padding: 25px 0px 25px 0px;
-        width: 100%;
-        height: 25px;
-        -webkit-box-shadow: 0 6px 4px -4px black;
-        -moz-box-shadow: 0 6px 4px -4px black;
-        box-shadow: 0 6px 4px -4px black;
-        position: fixed;
-    }
 
     .content-gallery {
         margin-top: 300px;
     }
 
-    footer { 
-        width: 100%; 
-        flex-shrink: 0; 
-        text-align: center;
-        // padding: 10px; removes margin space
-        background-color: none; 
-        color:black; 
-        p { font-size: 0.8em; }
-    }
-    
-    // styles for nav layout
-    
-
-
-    .decade-nav ul { 
-        margin: 0 auto;
-    
-        li { display: inline-block; padding: 0 8px; }
-    }
     
     .content-gallery ul { 
         margin: 0 auto;
@@ -480,15 +319,25 @@
         position: absolute;
         background: rgb(18,12,23);
         background: linear-gradient(90deg, rgba(18,12,23,1) 0%, rgba(30,20,39,1) 23%, rgba(48,26,66,1) 38%, rgba(74,48,104,1) 46%, rgba(167,127,239,0) 63%);
+        z-index: 3;
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        height: 275px;
+        display: block;
+        position: fixed;
+      }
+
+      .video-overlay-back {
+        position: absolute;
+        background-color: black;
         z-index: 1;
         display: flex;
         width: 100%;
         margin: 0 auto;
-        height: 315px;
+        height: 275px;
         display: block;
-        margin-top:-115px;
         position: fixed;
-      
       }
     
 
@@ -503,10 +352,10 @@
         max-width: 500px;
         display: flex;
         margin-top: 0px;
-        margin-left: 0px;
-        // width: 75%;
+        margin-left: 0;
         height: 250px;
-      
+        right: 0;
+        z-index: 2;
         position: fixed;
     
     }
@@ -531,11 +380,6 @@
     }
 /*-------------------------------Desktop------------------------------*/
 @media (min-width: 769px){
-
-
-        .container {
-        margin-top: 50px;
-        }
 
         html, body {
             height: 100%;
@@ -570,17 +414,6 @@
         
         .hidden { display: none; }
         
-        header{ 
-            position: absolute;
-            width: 100%;
-            background-color: white; 
-            color:black; 
-            -webkit-box-shadow: 0 6px 4px -4px black;
-            -moz-box-shadow: 0 6px 4px -4px black;
-            box-shadow: 0 6px 4px -4px black;
-            z-index: 4;
-        }
-        
         .logo {
             max-width: 200px;
             width: 100px;
@@ -592,47 +425,8 @@
     
          li {
             text-decoration: none;
-          
           }
           
-          
-          nav {
-            position: fixed;
-            align-items: flex-end;
-            justify-content: flex-end;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            width: 100%;
-            height: 50px;
-            display: flex;
-            line-height: 50px;
-          }
-          
-          nav li {
-            float: left;
-            list-style: none;
-            padding: 5px; 
-        }
-
-          nav img {
-            height: 10px;
-          }
-          
-          nav .brand {
-            flex: 1;
-            align-self: flex-start;
-            height: 50px;
-            margin-left: 10px;
-          }
-          
-          nav .link {
-            flex: 1;
-            max-width: max-content;
-            margin-right: 20px;
-          }
-          
-      
     
         .hook-vid-cont{
             position: fixed;
@@ -644,47 +438,13 @@
             position: fixed;
            
         }
-    
-        .decade-nav {
-            display: flex;
-            text-align: center;
-            margin: 0 auto;
-            // display: block;
-            margin-top: 275px;
-            background-color: white;
-            padding: 25px 0px 25px 0px;
-            width: 100%;
-            height: 25px;
-            -webkit-box-shadow: 0 6px 4px -4px black;
-            -moz-box-shadow: 0 6px 4px -4px black;
-            box-shadow: 0 6px 4px -4px black;
-            position: fixed;
-        }
+
     
         .content-gallery {
             margin-top: 350px;
         }
     
-        footer { 
-            width: 100%; 
-            flex-shrink: 0; 
-            text-align: center;
-            // padding: 10px; removes margin space
-            background-color: none; 
-            color:black; 
-            p { font-size: 0.8em; }
-        }
-        
-        // styles for nav layout
-        
-    
-    
-        .decade-nav ul { 
-            margin: 0 auto;
-        
-            li { display: inline-block; padding: 0 8px; }
-        }
-        
+   
         .content-gallery ul { 
             margin: 0 auto;
         
@@ -743,6 +503,19 @@
             position: absolute;
             background: rgb(18,12,23);
             background: linear-gradient(90deg, rgba(18,12,23,1) 0%, rgba(30,20,39,1) 23%, rgba(48,26,66,1) 38%, rgba(74,48,104,1) 46%, rgba(167,127,239,0) 63%);
+            z-index: 3;
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+            height: 390px;
+            display: block;
+            margin-top:-115px;
+            position: fixed;
+          }
+
+          .video-overlay-back {
+            position: absolute;
+            background-color: black;
             z-index: 1;
             display: flex;
             width: 100%;
@@ -751,8 +524,9 @@
             display: block;
             margin-top:-115px;
             position: fixed;
-          
           }
+
+     
 
     .movie-cont {
         justify-content: flex-end;
@@ -765,26 +539,26 @@
             max-width: 100%;
             display: flex;
             margin-top: 0px;
-            // margin-left: 400px;
-            // width: 75%;
+            right: 0;
             height: 300px;
             position: fixed;
+            z-index: 2;
         }
         
-        .instructions { padding-top: 30px; text-align: center; }
+        // .instructions { padding-top: 30px; text-align: center; }
         
-        .up-arrow { text-align: center }
+        // .up-arrow { text-align: center }
         
-        .up-arrow span {
-            font-size: 2em;
-            padding: 8px 15px 8px;
-            border-radius: 50%;
-            font-weight: bolder;
-            background-color: rgba(255,255,255,0.2);
-            cursor: pointer;
-            display: none;
-        }
+        // .up-arrow span {
+        //     font-size: 2em;
+        //     padding: 8px 15px 8px;
+        //     border-radius: 50%;
+        //     font-weight: bolder;
+        //     background-color: rgba(255,255,255,0.2);
+        //     cursor: pointer;
+        //     display: none;
+        // }
         
-        .show-scroller {display: inline-block !important; }
+        // .show-scroller {display: inline-block !important; }
     
     }

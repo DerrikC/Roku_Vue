@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Vue.js Single-File JavaScript Component Demo</title>
+  <title>RokuFlashback</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
@@ -19,7 +19,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<header class="col-sm-12 fixed-top">
-				<img src="images/flashback-logo.svg" alt="Roku logo" width="90">
+				<img src="images/flashback-logo.svg" alt="Roku logo" >
 				<nav class="float-right">
 				<ul>
 					<!-- <li>Kids</li> -->            
@@ -31,6 +31,8 @@
 			</header>
 		</div>
 	</div> <!-- end container fluid -->
+
+
 	
 	<!-- first thing in component templates should be a container -->
 	<router-view @authenticated="setAuthenticated"/>	
@@ -39,15 +41,8 @@
 
 	<footer>
 		<p class="copy">
-			&copy; 2018 The Awesome Company, Inc
+			&copy; 2020 RokuFlashback Concept
 		</p>
-
-		<ul class="float-right">
-			<li><i class="fab fa-facebook"></i></li>
-			<li><i class="fab fa-twitter-square"></i></li>
-			<li><i class="fab fa-google-plus-square"></i></li>
-			<li><i class="fab fa-instagram"></i></li>
-		</ul>
 	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

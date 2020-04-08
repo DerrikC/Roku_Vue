@@ -1,0 +1,55 @@
+
+
+.containerLogin {
+    margin: 75px;
+}
+
+.signInForm {
+ background-color: white;
+ padding: 25px;
+ width: 400px;
+ margin: 0 auto;
+}
+
+
+@import '_vars'; 
+
+
+ .signIn h1 {
+    color: $roku-darkGrey;
+    margin-top: 25px;
+    padding: 22px;
+    font-size: .75rem;
+}
+
+
+
+ .signIn{
+    background-color: white;
+}
+
+
+#app {
+        background: rgb(107,63,149);
+        background: radial-gradient(circle, rgba(107,63,149,1) 0%, rgba(18,12,23,1) 100%);
+        color: #333;
+}
+
+
+input {
+    background-color: #ECEBEB;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+ .signBtn {
+    background-color: #5E3687;
+    padding: 10px;
+    margin-top: 15px;
+    color: white;
+    width: 100%;
+}
+
