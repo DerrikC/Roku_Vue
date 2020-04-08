@@ -1,60 +1,100 @@
+.container {
+  margin-top: 75px;
+}
+
 //posters and thumbnails
+
+.topContent {
+  margin: 0 ;
+  padding: 0;
+}
+
+.media-type {
+  background-color: white;
+  z-index: 9999;
+  position: fixed;
+  margin-top: 350px;
+  list-style: none;
+  padding: 10px;
+  right: 0;
+}
+
+#controlsSpacer {
+  margin: 0;
+  padding: 0;
+}
+
 .lowerGallery img {
   width: 75px;
   margin: 20px;
-  max-width: 500px;
 }
+
+.lowerGallery {
+  margin-top: 350px;
+  width: 100%;
+}
+
+.row {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.col-12.col-sm-9 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 
 //Hook movies at the top 
 
- .show-movie { max-height: 800px; }
+//  .show-movie { max-height: 1000px; }
 
-.movie-title {
-  display: flex;
-  position: absolute;
-  font-size: 1.5rem;
-  text-align: left;
-  margin-top: 50px;
-  padding: 22px;
-  color: white;
-  max-width: 45%;
-  min-width: 200px;
-  z-index: 2;
-  position: fixed;
- }
+// .movie-title {
+//   display: flex;
+//   position: absolute;
+//   font-size: 1.5rem;
+//   text-align: left;
+//   margin-top: 50px;
+//   padding: 22px;
+//   color: white;
+//   max-width: 45%;
+//   min-width: 200px;
+//   z-index: 2;
+//   position: fixed;
+//  }
  
-.movie-details {
-  position: absolute;
-  display: flex;
-  margin-top: 80px;
-  padding-left: 22px;
-  padding-top: 12px;
-  margin-bottom: 40px;
-  text-align: left;
-  margin-top: 125px;
-  max-width: 45%;
-  color: white;
-  z-index: 2;
-}
+// .movie-details {
+//   position: absolute;
+//   display: flex;
+//   margin-top: 80px;
+//   padding-left: 22px;
+//   padding-top: 12px;
+//   margin-bottom: 40px;
+//   text-align: left;
+//   margin-top: 125px;
+//   max-width: 45%;
+//   color: white;
+//   z-index: 2;
+// }
 
-.movie-details h3 {
-  margin-top: 8px;
-  margin-bottom: 12px;
-  position: fixed;
-}
+// .movie-details h3 {
+//   margin-top: 8px;
+//   margin-bottom: 12px;
+//   position: fixed;
+// }
 
-.movie-details p { 
-  text-align: left; 
-  position: fixed;
-  max-width: 45%;
+// .movie-details p { 
+//   text-align: left; 
+//   position: fixed;
+//   max-width: 45%;
 
-}
+// }
 
-.movie-socialBtns {
-  display: flex;
-  position: absolute;
-  text-align: left;
-  margin-top: 250px;
-  z-index: 3;
-}
+// .movie-socialBtns {
+//   display: flex;
+//   position: absolute;
+//   text-align: left;
+//   margin-top: 250px;
+//   z-index: 3;
+// }
 

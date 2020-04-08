@@ -3,21 +3,36 @@ export default {
     name: "TheVideoComponent",
 
     template: `
-    <section>
+    <section class="topContent">
+    <div class="video-overlay"></div>
+    <div class="video-overlay-back"></div>
+    
+
         <div class="row">
-            <div class="col-12 order-2 order-md-1 col-md-3 media-container">
+            <div class="col-12 order-2 order-md-1 col-md-3 media-container1">
                 <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
                 <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
                 <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
                 <span class="media-year">{{currentMediaDetails.movies_year}}</span>
 
             </div>
-
+    
+           
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-                <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
+                <video autoplay muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
             </div>
         </div>
-
+        
+        <div class="decade-nav">
+            <ul>
+              <li><a class="underline">50s</a></li>
+              <li><a class="underline">60s</a></li>
+              <li><a class="underline">70s</a></li>
+              <li><a class="underline">80s</a></li>
+              <li><a class="underline">90s</a></li>
+            </ul>
+            </div>
+        
         <div class="lowerGallery">
         <div class="row">
             <div class="col-12 col-sm-9">

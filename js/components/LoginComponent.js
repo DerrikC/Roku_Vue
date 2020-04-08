@@ -2,12 +2,14 @@ export default {
     template: `
 
     
-        <div class="container">
+        <div class="containerLogin">
         
         <h1>Sign In</h1>
 
  
-      
+        <div class="signCont">
+        <div class="signInForm">
+
         <label for="Email or Phone Number">*Username</label>
         <br>
         <input v-model="input.username" type="text" id="username" name="username" placeholder="Email or phone number" required>
@@ -26,7 +28,8 @@ export default {
     <button>Forgot Password?</button>
 
     </div>
-  
+    </div>
+    </div>
  
      `,
 
