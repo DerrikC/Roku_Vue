@@ -19,7 +19,9 @@ export default {
         </div>
            
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
+            <div class="trailerCont">
                 <video autoplay muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
+            </div>
             </div>
         </div>
         
@@ -38,7 +40,7 @@ export default {
             <div class="col-12 col-sm-9">
                 <div class="thumb-wrapper clearfix">
                     <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" 
-                    alt="media thumb" @mouseover="loadNewMovie(item)" class="img-thumbnail rounded float-left 
+                    alt="media thumb" @mouseover="loadNewMovie(item)" @click="showMediaPlayer(item)" class="img-thumbnail rounded 
                     media-thumb"> 
                 </div>
             </div>
@@ -60,6 +62,11 @@ export default {
     },
 
     methods: {
+
+        showMediaPlayer(item) {
+            this.$router.push({ name: "mediaPlayer", params: {currentMovie: item}});
+        },
+    
         retrieveVideoContent() {
             // fetch all the video content here (don't care about filtering, genre etc at this point)
             // debugger;
