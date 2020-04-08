@@ -4,7 +4,7 @@ require_once 'load.php';
 if (isset($_GET['filter'])) {
     //Filter
     $args = array(
-        'tbl' => 'tbl_movies',
+        'tbl' => 'tbl_movies_new',
         'tbl2' => 'tbl_genre',
         'tbl3' => 'tbl_mov_genre',
         'col' => 'movies_id',
@@ -14,7 +14,7 @@ if (isset($_GET['filter'])) {
     );
     $getMovies = getMoviesByFilter($args);
 } else {
-    $movie_table = 'tbl_movies';
+    $movie_table = 'tbl_movies_new';
     $getMovies = getAll($movie_table);
 }
 ?>

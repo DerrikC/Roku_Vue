@@ -14,7 +14,7 @@ export default {
         
         </div>
     <section>
-    <i class="fas fa-film media-icon"></i></i><h1>This is the video component</h1>
+    <i class="fas fa-film media-icon"></i><h1>This is the video component</h1>
 </section>
     `
 

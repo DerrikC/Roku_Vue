@@ -3,7 +3,7 @@ require_once 'load.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $tbl = 'tbl_movies';
+    $tbl = 'tbl_movies_new';
     $col = 'movies_id';
     $getMovie = getSingleMovie($tbl, $col, $id);
 }
