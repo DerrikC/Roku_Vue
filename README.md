@@ -37,24 +37,13 @@ In another terminal:
 * [Vue.js](https://vuejs.org/) - Js component
 * [PHP](https://www.php.net/) - Admin & Data
 * [Sass](https://sass-lang.com/) - CSS compiler
+* [Gulp](https://gulpjs.com/) - Js Enhancement
 * [MySQL](https://www.mysql.com/) - Database  
 
 ## Authors
 
-Contributors names and contact info
-
-* Derrik Campbell @DerrikC
-* Graham Vickers @grahamvickers
-
-## Authors
-
-* **Graham Vickers**  - [Fanshawe College](https://github.com/grahamvickers)
 * **Derrik Campbell** - [Fanshawe College](https://github.com/DerrikC)
-
-## Version History
-
-* 0.1
-    * Initial Release
+* **Graham Vickers**  - [Fanshawe College](https://github.com/grahamvickers)
   
 ## Browser Capability 
 
@@ -63,6 +52,11 @@ Contributors names and contact info
 * Safari - 90%
 * IE - Unknown
 
+## Version History
+
+* 0.1
+    * Initial Release
+    
 ## License
 
 MIT
