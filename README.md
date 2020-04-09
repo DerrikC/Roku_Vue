@@ -2,33 +2,45 @@
 
 # ROKU Flashback Assignment
 ![rokuMobile](images/mobile_rokuflashback_design-1.png)
+
 ## Description
 An audio and video app that uses queries and database assets. The user will be able to login and select either a parent section or a kids section, each with a unique theme. The parent section will require a password. Some content will be organized based on ratings and priveleges. 
 
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
 ### Prerequisites
 
-You must have the following programs installed to view the application: 
+You must have the following programs installed: 
 
-* Docker
 * MAMP/ WAMP
-
-## Getting Started
- >Clone the repo to your computer
- >Open in your preferred developing application
- >in terminal watch sass using : sass --watch sass:css --style compressed
-
 
 ### Installing
 
+1 - Open up your termial and copy the following below and place the project it into your 'htdocs'/'WWW' folder inside of MAMP/WAMP application. This will download the project to your computer. 
 
-To import the database: 
-Access the db_rokudata sql document in the 'database' folder.
+```
+$ cd /Applications/MAMP/htdocs
+```
+```
+$ git clone https://github.com/DerrikC/Roku_Vue.git
+```
 
-> Launch MAMP
-In another terminal:
-> create database db_movies_roku;
-> use db_movies_roku;
->source [](drag and drop the the db_movies_roku files)
+2 - To see dynamic content you need to install the .sql file from the 'db' folder, this can be done in the Terminal or through phpMyAdmin. Create a new database and name it 'db_movies_roku' and then import the .sql file into the empty database. 
+
+### Deployment
+
+Now after you have installed the project and imported the .sql file to your MAMP/WAMp server, you can open up the broswer of your choice and [go live](http://localhost:8888/Roku_Vue/)
+
+## Development
+
+If you wish to contibute to this project, please feel free to add new updates or fixes that you see fit. Please follow the proper naming convention of branches '(dev/des).(Your Initials).(Job Completed)'. This project is built with [Sass](https://sass-lang.com/), so you will need to connect the Sass to the CSS. To do so, copy and paste the following into the project terminal window.
+
+```
+$ sass --watch sass:css --style compressed
+```
+You can now make Sass changes that will be applied to the main css file. 
 
 ## Built With
 
