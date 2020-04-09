@@ -5,11 +5,11 @@ if (isset($_GET['filter'])) {
     //Filter
     $args = array(
         'tbl' => 'tbl_movies',
-        'tbl2' => 'tbl_genre',
-        'tbl3' => 'tbl_mov_genre',
+        'tbl2' => 'tbl_decade',
+        'tbl3' => 'tbl_mov_decade',
         'col' => 'movies_id',
-        'col2' => 'genre_id',
-        'col3' => 'genre_name',
+        'col2' => 'decade_id',
+        'col3' => 'decade_name',
         'filter' => $_GET['filter'],
     );
     $getMovies = getMoviesByFilter($args);
