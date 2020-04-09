@@ -2,6 +2,7 @@
 //THIS FILE HAS ASSORTED GLOBAL CHANGES CURRENTLY
 .mediaCont .moviePlayerVideo {
   margin: 0 auto;
+  left: 50%;
 }
 
 .container {
@@ -62,8 +63,27 @@
   max-height: 200px;
 }
 
+#movieBtns{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  img{
+    background-color: none;
+    width: 30px;
+  }
+  img:hover{
+    cursor: pointer;
+    filter: invert(0.5) sepia(1) hue-rotate(200deg);
+  }
+}
+
 .card-body p {
   color: black;
+}
+
+.container p{
+  color: #f2f2f2;
 }
 
 //Hook movies at the top 

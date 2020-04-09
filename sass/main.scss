@@ -29,10 +29,17 @@
     img .poster { 
         width: 180px;
     }
-    
+        a:hover{
+            cursor: pointer;
+        }
+    }
+
+    li:hover{
+      cursor: pointer;
     }
 
    .poster:hover { 
+    cursor: pointer;
     outline: white solid 4px;
     }
 
@@ -97,6 +104,7 @@
     }
     
     a.underline:before {
+      cursor: pointer;
       content: "";
       position: absolute;
       border-radius: 15px;
@@ -113,6 +121,9 @@
     a.underline:hover:before {
       visibility: visible;
       width: 100%;
+    }
+    a:hover{
+        cursor: pointer;
     }
     
 
@@ -275,6 +286,7 @@
     }
     
     a.underline:before {
+      cursor: pointer;
       content: "";
       position: absolute;
       border-radius: 15px;
@@ -289,6 +301,7 @@
     
     
     a.underline:hover:before {
+      cursor: pointer;
       visibility: visible;
       width: 100%;
     }

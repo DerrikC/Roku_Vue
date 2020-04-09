@@ -8,6 +8,11 @@ header{
     -moz-box-shadow: 0 6px 4px -4px black;
     box-shadow: 0 6px 4px -4px black;
     z-index: 4;
+    .row{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
 }
 
 header img {
