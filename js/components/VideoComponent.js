@@ -36,11 +36,11 @@ export default {
         
         <div class="decade-nav">
             <ul>
-              <li><a class="underline">50s</a></li>
-              <li><a class="underline">60s</a></li>
-              <li><a class="underline">70s</a></li>
-              <li><a class="underline">80s</a></li>
-              <li><a class="underline">90s</a></li>
+              <li><a href="index.php?filter=50s" class="underline">50s</a></li>
+              <li><a href="index.php?filter=60s" class="underline">60s</a></li>
+              <li><a href="index.php?filter=70s" class="underline">70s</a></li>
+              <li><a href="index.php?filter=80s" class="underline">80s</a></li>
+              <li><a href="index.php?filter=90s" class="underline">90s</a></li>
             </ul>
             </div>
         
