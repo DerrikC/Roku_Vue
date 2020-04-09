@@ -15,15 +15,20 @@ export default {
                 <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
                 <span class="media-year">{{currentMediaDetails.movies_year}}</span>
                 <div id="movieBtns">
+                    <img src="images/comment-btn.svg" alt="Comment Button">
                     <img src="images/like-btn.svg" alt="Like Button">
 	                <img src="images/share-btn.svg" alt="Share Button">
-                    <img src="images/comment-btn.svg" alt="Comment Button">
                 </div>
             </div>
         </div>
+        <div class="row">
+        <span class="media-decade">{{currentMediaDetails.movies_decade}}</span>
+        </div>
            
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
+
             <div class="trailerCont">
+           
                 <video autoplay muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
             </div>
             </div>
@@ -44,8 +49,7 @@ export default {
             <div class="col-12 col-sm-9">
                 <div class="thumb-wrapper clearfix">
                     <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" 
-                    alt="media thumb" @mouseover="loadNewMovie(item)" @click="showMediaPlayer(item)" class="img-thumbnail rounded 
-                    media-thumb"> 
+                    alt="media thumb" @mouseover="loadNewMovie(item)" @click="showMediaPlayer(item)" class="poster"> 
                 </div>
             </div>
         </div>

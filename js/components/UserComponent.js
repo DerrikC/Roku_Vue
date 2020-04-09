@@ -8,7 +8,9 @@ export default {
         
             <div class="card-body text-center">
                 <img :src="'images/user/' + liveuser.avatar + '.jpg'" class="rounded-circle img-fluid">
+                <div class="nameCont">
                 <p>{{ liveuser.uname }}</p>
+                </div>
             </div>
         </div>
         
