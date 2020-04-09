@@ -15,7 +15,7 @@ You must have the following programs installed to view the application:
 ## Getting Started
  >Clone the repo to your computer
  >Open in your preferred developing application
- >in terminal watch sass using : sass --watch sass:public/css --style compressed
+ >in terminal watch sass using : sass --watch sass:css --style compressed
 
 
 ### Installing
@@ -27,7 +27,7 @@ Access the db_rokudata sql document in the 'database' folder.
 > Launch MAMP
 In another terminal:
 > create database db_movies_roku;
-> use db_rokudata;
+> use db_movies_roku;
 >source [](drag and drop the the db_movies_roku files)
 
 ## Built With
@@ -49,7 +49,7 @@ In another terminal:
 
 * Chrome - 100%
 * Firefox - 100%
-* Safari - 90%
+* Safari - [under construction]
 * IE - Unknown
 
 ## Version History
