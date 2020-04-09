@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 09, 2020 at 05:46 PM
+-- Generation Time: Apr 09, 2020 at 09:09 PM
 -- Server version: 5.7.26
--- PHP Version: 7.3.8
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -1107,44 +1107,47 @@ INSERT INTO `tbl_mov_studio` (`mov_studio_id`, `movies_id`, `studio_id`) VALUES
 --
 
 CREATE TABLE `tbl_music` (
-  `music_id` int(11) NOT NULL,
-  `music_title` text NOT NULL,
-  `music_des` text NOT NULL,
-  `music_dec` text NOT NULL,
-  `music_img` text NOT NULL,
-  `music_vid` text NOT NULL
+  `music_id` mediumint(8) UNSIGNED NOT NULL,
+  `music_cover` varchar(75) NOT NULL DEFAULT 'cover_default.jpg',
+  `music_title` varchar(125) NOT NULL,
+  `music_year` varchar(5) NOT NULL,
+  `music_runtime` varchar(25) NOT NULL,
+  `music_storyline` text NOT NULL,
+  `music_trailer` varchar(75) NOT NULL DEFAULT 'trailer_default.jpg',
+  `music_release` varchar(125) NOT NULL,
+  `music_decade` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_music`
 --
 
-INSERT INTO `tbl_music` (`music_id`, `music_title`, `music_des`, `music_dec`, `music_img`, `music_vid`) VALUES
-(1, 'Don\'t Be Cruel - Elvis Presley', '\"Don\'t Be Cruel\" is a song recorded by Elvis Presley and written by Otis Blackwell in 1956. It was inducted into the Grammy Hall of Fame in 2002.', '50', 'cruel.jpg', 'cruel.mp4'),
-(2, 'All Shook up - Elvis Presley', '\"All Shook Up\" is a song recorded by Elvis Presley, published by Elvis Presley Music, and composed by Otis Blackwell. ', '50', 'shook.jpg', 'shook.mp4'),
-(3, 'The Great Pretender - The Platters', '\"The Great Pretender\" is a popular song recorded by The Platters, with Tony Williams on lead vocals, and released as a single on November 3, 1955.', '50', 'pretender.jpg', 'pretender.mp4'),
-(4, 'The Twist - Hank Ballard & The Midnighters', '\"The Twist\" is an American pop song written and originally released in early 1959 by Hank Ballard and the Midnighters as a B-side to \"Teardrops on Your Letter\".', '50', 'twist.jpg', 'twist.mp4'),
-(5, 'The Stroll - The Dimonds', 'The Stroll was both a slow rock \'n\' roll dance and a song that was popular in the late 1950s. Billboard first reported that \"The Stroll\" might herald a new dance craze similar to the \"Big Apple\" in December 1957.', '50', 'stroll.jpg', 'stroll.mp4'),
-(6, 'Hey Jude - The Beatles', '\"Hey Jude\" is a song by the English rock band the Beatles that was released as a non-album single on 26 August 1968.', '60', 'jude.jpg', 'jude.mp4'),
-(7, 'California Dreamin\' - The Mamas & The Papas', '\"California Dreamin\'\" is a song written by John Phillips and Michelle Phillips and was first recorded by Barry McGuire. ', '60', 'california.jpg', 'california.mp4'),
-(8, 'I\'m a Believer - The Monkees', '\"I\'m a Believer\" is a song composed by Neil Diamond and recorded by The Monkees in 1966 with the lead vocals by Micky Dolenz.', '60', 'believer.jpg', 'believer.mp4'),
-(9, 'I Got You Babe - Sonny & Cher', '\"I Got You Babe\" is a song written by Sonny Bono. It was the first single taken from the debut studio album Look at Us, of the American pop music duo Sonny & Cher.', '60', 'babe.jpg', 'babe.mp4'),
-(10, 'Pretty Women - Roy Orbison', '\"Oh, Pretty Woman\" or \"Pretty Woman\" is a song recorded by Roy Orbison, written by Orbison and Bill Dees.', '60', 'women.jpg', 'women.mp4'),
-(11, 'Stayin\' Alive - Bee Gees', 'Stayin\' Alive\" is a song written and performed by the Bee Gees from the Saturday Night Fever motion picture soundtrack.', '70', 'alive.jpg', 'alive.mp4'),
-(12, 'Dancing Queen - Abba', '\"Dancing Queen\" is a Europop song by the Swedish group ABBA, and the lead single from their fourth studio album, Arrival.', '70', 'dancing.jpg', 'dancing.mp4'),
-(13, 'Stairway to Heaven - Led Zeppelin', '\"Stairway to Heaven\" is a song by the English rock band Led Zeppelin, released in late 1971. It was composed by the band\'s guitarist Jimmy Page and vocalist Robert Plant for their untitled fourth studio album. ', '70', 'heaven.jpg', 'heaven.mp4'),
-(14, 'Lean On Me - Bill Withers', '\"Lean on Me\" is a song written and recorded by American singer-songwriter Bill Withers. It was released in April 1972 as the first single from his second album, Still Bill.', '70', 'lean.jpg', 'lean.mp4'),
-(15, 'Dream On - Aerosmith', '\"Dream On\" is a power ballad by Aerosmith from their 1973 debut album, Aerosmith. Written by lead singer Steven Tyler, this song was their first major hit and became a classic rock radio staple.', '70', 'dream.jpg', 'dream.mp4'),
-(16, 'Billie Jean - Michael Jackson', '\"Billie Jean\" is a song by American singer Michael Jackson, released by Epic Records on January 2, 1983, as the second single from Jackson\'s sixth studio album, Thriller.', '80', 'jean.jpg', 'jean.jpg'),
-(17, 'Sweet Dreams - Eurythmics', '\"Sweet Dreams (Are Made of This)\" is a song by the British new wave music duo Eurythmics. The song is the title track of their album of the same name and was released as the fourth and final single from the album in early 1983. ', '80', 'sweet.jpg', 'sweet.mp4'),
-(18, 'Livin\' On A Prayer - Bon Jovi', '\"Livin\' on a Prayer\" is Bon Jovi\'s second chart-topping single from their third album Slippery When Wet.', '80', 'prayer.jpg', 'prayer.mp4'),
-(19, 'Sweet Child O\' Mine - Guns N\' Roses', '\"Sweet Child o\' Mine\" is a song by American rock band Guns N\' Roses. It appeared on their debut album Appetite for Destruction.', '80', 'child.jpg', 'child.mp4'),
-(20, 'Careless Whisper - George Michael', '\"Careless Whisper\" is a pop ballad written by George Michael and Andrew Ridgeley of British music duo Wham!. It was released on 24 July 1984 on the Wham! album Make It Big.', '80', 'whisper.jpg', 'whisper.jpg'),
-(21, 'Livin\' La Vida Loca - Ricky Martin', '\"Livin\' la Vida Loca\" is a song performed by Ricky Martin. It was released on March 23, 1999, from Martin\'s self-titled debut English-language album. ', '90', 'livin.jpg', 'livin.mp4'),
-(22, 'I Want It That Way - Backstreet Boys', '\"I Want It That Way\" is a song by American boy band the Backstreet Boys. It was released on April 12, 1999, as the lead single from their third studio album, Millennium.', '90', 'want.jpg', 'want.mp4'),
-(23, 'U Can’t Touch This - HAMMER', '\"U Can\'t Touch This\" is a song cowritten, produced and performed by MC Hammer from his 1990 album Please Hammer, Don\'t Hurt \'Em.', '90', 'touch.jpg', 'touch.mp4'),
-(24, 'Baby One More Time - Britney Spears', '\"...Baby One More Time\" is the debut single by American singer Britney Spears from her debut studio album of the same title.', '90', 'baby.jpg', 'baby.mp4'),
-(25, 'What Is Love - Haddaway', '\"What Is Love\" is a song recorded by Trinidadian-German Eurodance artist Haddaway for his debut album, The Album. ', '90', 'love.jpg', 'love.mp4');
+INSERT INTO `tbl_music` (`music_id`, `music_cover`, `music_title`, `music_year`, `music_runtime`, `music_storyline`, `music_trailer`, `music_release`, `music_decade`) VALUES
+(1, 'cruel.jpg', 'Don\'t Be Cruel - Elvis Presley', '', '', '\"Don\'t Be Cruel\" is a song recorded by Elvis Presley and written by Otis Blackwell in 1956. It was inducted into the Grammy Hall of Fame in 2002.', 'cruel.mp4', '', '50s'),
+(2, 'shook.jpg', 'All Shook up - Elvis Presley', '', '', '\"All Shook Up\" is a song recorded by Elvis Presley, published by Elvis Presley Music, and composed by Otis Blackwell. ', 'shook.mp4', '', '50s'),
+(3, 'pretender.jpg', 'The Great Pretender - The Platters', '', '', '\"The Great Pretender\" is a popular song recorded by The Platters, with Tony Williams on lead vocals, and released as a single on November 3, 1955.', 'pretender.mp4', '', '50s'),
+(4, 'twist.jpg', 'The Twist - Hank Ballard & The Midnighters', '', '', '\"The Twist\" is an American pop song written and originally released in early 1959 by Hank Ballard and the Midnighters as a B-side to \"Teardrops on Your Letter\".', 'twist.mp4', '', '50s'),
+(5, 'stroll.jpg', 'The Stroll - The Dimonds', '', '', 'The Stroll was both a slow rock \'n\' roll dance and a song that was popular in the late 1950s. Billboard first reported that \"The Stroll\" might herald a new dance craze similar to the \"Big Apple\" in December 1957.', 'stroll.mp4', '', '50s'),
+(6, 'jude.jpg', 'Hey Jude - The Beatles', '', '', '\"Hey Jude\" is a song by the English rock band the Beatles that was released as a non-album single on 26 August 1968.', 'jude.mp4', '', '60s'),
+(7, 'california.jpg', 'California Dreamin\' - The Mamas & The Papas', '', '', '\"California Dreamin\'\" is a song written by John Phillips and Michelle Phillips and was first recorded by Barry McGuire. ', 'california.mp4', '', '60s'),
+(8, 'believer.jpg', 'I\'m a Believer - The Monkees', '', '', '\"I\'m a Believer\" is a song composed by Neil Diamond and recorded by The Monkees in 1966 with the lead vocals by Micky Dolenz.', 'believer.mp4', '', '60s'),
+(9, 'babe.jpg', 'I Got You Babe - Sonny & Cher', '', '', '\"I Got You Babe\" is a song written by Sonny Bono. It was the first single taken from the debut studio album Look at Us, of the American pop music duo Sonny & Cher.', 'babe.mp4', '', '60s'),
+(10, 'women.jpg', 'Pretty Women - Roy Orbison', '', '', '\"Oh, Pretty Woman\" or \"Pretty Woman\" is a song recorded by Roy Orbison, written by Orbison and Bill Dees.', 'women.mp4', '', '60s'),
+(11, 'alive.jpg', 'Stayin\' Alive - Bee Gees', '', '', 'Stayin\' Alive\" is a song written and performed by the Bee Gees from the Saturday Night Fever motion picture soundtrack.', 'alive.mp4', '', '70s'),
+(12, 'dancing.jpg', 'Dancing Queen - Abba', '', '', '\"Dancing Queen\" is a Europop song by the Swedish group ABBA, and the lead single from their fourth studio album, Arrival.', 'dancing.mp4', '', '70s'),
+(13, 'heaven.jpg', 'Stairway to Heaven - Led Zeppelin', '', '', '\"Stairway to Heaven\" is a song by the English rock band Led Zeppelin, released in late 1971. It was composed by the band\'s guitarist Jimmy Page and vocalist Robert Plant for their untitled fourth studio album. ', 'heaven.mp4', '', '70s'),
+(14, 'lean.jpg', 'Lean On Me - Bill Withers', '', '', '\"Lean on Me\" is a song written and recorded by American singer-songwriter Bill Withers. It was released in April 1972 as the first single from his second album, Still Bill.', 'lean.mp4', '', '70s'),
+(15, 'dream.jpg', 'Dream On - Aerosmith', '', '', '\"Dream On\" is a power ballad by Aerosmith from their 1973 debut album, Aerosmith. Written by lead singer Steven Tyler, this song was their first major hit and became a classic rock radio staple.', 'dream.mp4', '', '70s'),
+(16, 'jean.jpg', 'Billie Jean - Michael Jackson', '', '', '\"Billie Jean\" is a song by American singer Michael Jackson, released by Epic Records on January 2, 1983, as the second single from Jackson\'s sixth studio album, Thriller.', 'jean.jpg', '', '80s'),
+(17, 'sweet.jpg', 'Sweet Dreams - Eurythmics', '', '', '\"Sweet Dreams (Are Made of This)\" is a song by the British new wave music duo Eurythmics. The song is the title track of their album of the same name and was released as the fourth and final single from the album in early 1983. ', 'sweet.mp4', '', '80s'),
+(18, 'prayer.jpg', 'Livin\' On A Prayer - Bon Jovi', '', '', '\"Livin\' on a Prayer\" is Bon Jovi\'s second chart-topping single from their third album Slippery When Wet', 'prayer.mp4', '', '80s'),
+(19, 'child.jpg', 'Sweet Child O\' Mine - Guns N\' Roses', '', '', '\"Sweet Child o\' Mine\" is a song by American rock band Guns N\' Roses. It appeared on their debut album Appetite for Destruction', 'child.mp4', '', '80s'),
+(20, 'whisper.jpg', 'Careless Whisper - George Michael', '', '', '\"Careless Whisper\" is a pop ballad written by George Michael and Andrew Ridgeley of British music duo Wham!. It was released on 24 July 1984 on the Wham! album Make It Big.', 'whisper.mp4', '', '80s'),
+(21, 'livin.jpg', 'Livin\' La Vida Loca - Ricky Martin', '', '', '\"Livin\' la Vida Loca\" is a song performed by Ricky Martin. It was released on March 23, 1999, from Martin\'s self-titled debut English-language album. ', 'livin.mp4', '', '90s'),
+(22, 'want.jpg', 'I Want It That Way - Backstreet Boys', '', '', '\"I Want It That Way\" is a song by American boy band the Backstreet Boys. It was released on April 12, 1999, as the lead single from their third studio album, Millennium.', 'want.mp4', '', '90s'),
+(23, 'touch.jpg', 'U Can’t Touch This - HAMMER', '', '', '\"U Can\'t Touch This\" is a song cowritten, produced and performed by MC Hammer from his 1990 album Please Hammer, Don\'t Hurt \'Em.', 'touch.mp4', '', '90s'),
+(24, 'baby.jpg', 'Baby One More Time - Britney Spears', '', '', '\"...Baby One More Time\" is the debut single by American singer Britney Spears from her debut studio album of the same title.', 'baby.mp4', '', '90s'),
+(25, 'love.jpg', 'What Is Love - Haddaway', '', '', '\"What Is Love\" is a song recorded by Trinidadian-German Eurodance artist Haddaway for his debut album, The Album. ', 'love.mp4', '', '90s');
 
 -- --------------------------------------------------------
 
@@ -1153,44 +1156,47 @@ INSERT INTO `tbl_music` (`music_id`, `music_title`, `music_des`, `music_dec`, `m
 --
 
 CREATE TABLE `tbl_shows` (
-  `show_id` int(11) NOT NULL,
-  `show_title` text NOT NULL,
-  `show_bio` text NOT NULL,
-  `show_dec` text NOT NULL,
-  `show_img` text NOT NULL,
-  `show_vid` text NOT NULL
+  `show_id` mediumint(8) UNSIGNED NOT NULL,
+  `show_cover` varchar(75) NOT NULL DEFAULT 'cover_default.jpg',
+  `show_title` varchar(125) NOT NULL,
+  `show_year` varchar(5) NOT NULL,
+  `show_runtime` varchar(25) NOT NULL,
+  `show_storyline` text NOT NULL,
+  `show_trailer` varchar(75) NOT NULL DEFAULT 'trailer_default.jpg',
+  `show_release` varchar(125) NOT NULL,
+  `show_decade` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_shows`
 --
 
-INSERT INTO `tbl_shows` (`show_id`, `show_title`, `show_bio`, `show_dec`, `show_img`, `show_vid`) VALUES
-(1, 'I Love Lucy', 'Naive and ambitious but lacking the skill, Lucy\'s relentless efforts to get into showbiz often lands herself and her husband into trouble.Her neighbours and friends also get entangled in her antics', '50', 'lucy.jpg', 'lucy.mp4'),
-(2, 'The Twilight Zone', 'A comprehensive collection of mystical tales where people try to solve their problems using their own unique ideas.', '50', 'zone.jpg', 'zone.mp4'),
-(3, 'The Lone Ranger', 'The Lone Ranger, the sole survivor of a group of Texas Rangers, befriends an American Indian. Together, the two set out to defend people from evil forces.', '50', 'ranger.jpg', 'ranger.mp4'),
-(4, 'Alfred Hitchcock Presents', 'The program takes the viewers through the dramas, thrillers and mysteries of Alfred Hitchcock.', '50', 'hitchcock.jpg', 'hitchcock.mp4'),
-(5, 'Adventures of Superman', 'When he isn\'t fighting for truth, justice and the American way, the man in tights dons a suit and glasses for his secret identity as Daily Planet newspaper reporter Clark Kent, who works alongside friends Lois Lane and Jimmy Olsen for gruff boss Perry White.', '50', 'superman.jpg', 'superman.mp4'),
-(6, 'Hogan\'s Heroes', 'A bunch of inmates during World War II do their best to incapacitate war efforts. Their attempts lead to hilarious results.', '60', 'hogan.jpg', 'hogan.mp4'),
-(7, 'Gilligan\'s Island', 'Seven people from different walks of life are cast away at an unknown island after a violent storm. They adapt to their life on the island while continuously making attempts to escape.', '60', 'gilligans.jpg', 'gilligans.mp4'),
-(8, 'Batman', 'Eccentric Gotham City tycoon Bruce Wayne dons tights to fight crime as Batman, aided by pal Dick Ward as equally Spandex-clad Robin, in this \'60s camp classic.', '60', 'batman.jpg', 'batman.mp4'),
-(9, 'The Flintstones', 'The Flintstones were the modern Stone Age family. Residing in Bedrock, Fred Flintstone worked an unsatisfying quarry job, but returned home to lovely wife Wilma and eventually daughter Pebbles.', '60', 'flintstones.jpg', 'flintstones.mp4'),
-(10, 'The Brady Bunch', 'Mike, an architect with three sons, and Carol, a homemaker with three daughters, get married but their children struggle to bond with each other, leading to a challenging life for the family.', '60', 'brady.jpg', 'brady.mp4'),
-(11, 'M*A*S*H', 'The series is centered upon the interrelationships, stress and trauma involved in being a part of Mobile Army Surgical Hospital. They survive insuperable odds with the help of practical jokes and fun.', '70', 'mash.jpg', 'mash.mp4'),
-(12, 'The Dukes of Hazzard', 'Just some good old boys, never meaning no harm. But cousins Bo and Luke Duke certainly have a way of finding trouble with the law everywhere they turn.', '70', 'dukes.jpg', 'dukes.mp4'),
-(13, 'Happy Days', 'Set in 1950s and 1960s Milwaukee, this series tells the story of the Cunningham family -- father Howard, mother Marion, son Richie and daughter Joanie.', '70', 'happy.jpg', 'happy.mp4'),
-(14, 'All in the Family', 'The lead character, Archie Bunker, is a loudmouthed, uneducated bigot who believes in every stereotype he has ever heard. His wife, Edith, is sweet but not the sharpest knife in the drawer. ', '70', 'family.jpg', 'family.mp4'),
-(15, 'Charlie\'s Angels', 'The show that ushered in the phrase \"jiggle TV\" features three beautiful police academy-trained private detectives whose cases always seem to require that they don bikinis, evening gowns or other sexy clothing.', '70', 'angels.jpg', 'angels.mp4'),
-(16, 'Cheers', 'A group of people from different paths of life meet at Cheers, a bar run by Sam in Boston. They share their experiences while working and drinking at the bar.', '80', 'cheers.jpg', 'cheers.mp4'),
-(17, 'Miami Vice', 'This series is largely remembered for the stylish clothes Detectives Sonny Crockett and Ricardo Tubbs wore, the soundtrack, and its distinct visuals.', '80', 'miami.jpg', 'miami.mp4'),
-(18, 'The A-Team', 'A team of ex-special forces soldiers on the lam from the military police (even though they didn\'t really commit the crime for which they\'d been imprisoned) leaves a trail of explosions in its wake.', '80', 'ateam.jpg', 'ateam.jpg'),
-(19, 'Full House', 'Danny is a widower who is raising his three little girls after the death of his wife. But he has help from his musician brother-in-law, Jesse Katsopolis, and his best friend, comedian Joey Gladstone.', '80', 'house.jpg', 'house.mp4'),
-(20, 'The Simpsons', 'Working-class father Homer Simpson and his dysfunctional family deal with comical situations and the ups-and-downs of life in the town of Springfield.', '80', 'simpsons.jpg', 'simpsons.mp4'),
-(21, 'The Fresh Prince of Bel-Air', 'Will Smith more or less plays himself in this good-natured NBC sitcom. As the show\'s popular theme song explains, fictional Will\'s mom sends him away from his rough Philadelphia neighborhood to live with wealthy Uncle Phil and Aunt Vivian in Bel-Air.', '90', 'prince.jpg', 'prince.mp4'),
-(22, 'Friends', 'Follow the lives of six reckless adults living in Manhattan, as they indulge in adventures which make their lives both troublesome and happening.', '90', 'friends.jpg', 'friends.mp4'),
-(23, 'That \'70s Show', 'Eric, a high school student, and his group of teenage friends struggle to lead purposeful lives whilst going through the tumultuous phase of adolescence.', '90', '70s.jpg', '70s.mp4'),
-(24, 'The X-Files', 'Conspiracy theorist Fox Mulder and realist Dana Scully pull out all the stops as FBI special agents to investigate and get to the bottom of inexplicable paranormal cases.', '90', 'xfiles.jpg', 'xfiles.mp4'),
-(25, 'Seinfeld', 'Stand-up comedian Jerry Seinfeld wrestles with life\'s most perplexing yet trivial questions with his eccentric friends George, Elaine and Kramer.', '90', 'seinfeld.jpg', 'seinfeld.mp4');
+INSERT INTO `tbl_shows` (`show_id`, `show_cover`, `show_title`, `show_year`, `show_runtime`, `show_storyline`, `show_trailer`, `show_release`, `show_decade`) VALUES
+(1, 'lucy.jpg', 'I Love Lucy', '', '', 'Naive and ambitious but lacking the skill, Lucy\'s relentless efforts to get into showbiz often lands herself and her husband into trouble.Her neighbours and friends also get entangled in her antics', 'lucy.mp4', '', '50s'),
+(2, 'zone.jpg', 'The Twilight Zone', '', '', 'A comprehensive collection of mystical tales where people try to solve their problems using their own unique ideas.', 'zone.mp4', '', '50s'),
+(3, 'ranger.jpg', 'The Lone Ranger', '', '', 'The Lone Ranger, the sole survivor of a group of Texas Rangers, befriends an American Indian. Together, the two set out to defend people from evil forces.', 'ranger.mp4', '', '50s'),
+(4, 'hitchcock.jpg', 'Alfred Hitchcock Presents', '', '', 'The program takes the viewers through the dramas, thrillers and mysteries of Alfred Hitchcock.', 'hitchcock.mp4', '', '50s'),
+(5, 'superman.jpg', 'Adventures of Superman', '', '', 'When he isn\'t fighting for truth, justice and the American way, the man in tights dons a suit and glasses for his secret identity as Daily Planet newspaper reporter Clark Kent, who works alongside friends Lois Lane and Jimmy Olsen for gruff boss Perry White.', 'superman.mp4', '', '50s'),
+(6, 'hogan.jpg', 'Hogan\'s Heroes', '', '', 'A bunch of inmates during World War II do their best to incapacitate war efforts. Their attempts lead to hilarious results.', 'hogan.mp4', '', '60s'),
+(7, 'gilligans.jpg', 'Gilligan\'s Island', '', '', 'Seven people from different walks of life are cast away at an unknown island after a violent storm. They adapt to their life on the island while continuously making attempts to escape.', 'gilligans.mp4', '', '60s'),
+(8, 'batman.jpg', 'Batman', '', '', 'Eccentric Gotham City tycoon Bruce Wayne dons tights to fight crime as Batman, aided by pal Dick Ward as equally Spandex-clad Robin, in this \'60s camp classic.', 'batman.mp4', '', '60s'),
+(9, 'flintstones.jpg', 'The Flintstones', '', '', 'The Flintstones were the modern Stone Age family. Residing in Bedrock, Fred Flintstone worked an unsatisfying quarry job, but returned home to lovely wife Wilma and eventually daughter Pebbles.', 'flintstones.mp4', '', '60s'),
+(10, 'brady.jpg', 'The Brady Bunch', '', '', 'Mike, an architect with three sons, and Carol, a homemaker with three daughters, get married but their children struggle to bond with each other, leading to a challenging life for the family.', 'brady.mp4', '', '60s'),
+(11, 'mash.jpg', 'M*A*S*H', '', '', 'The series is centered upon the interrelationships, stress and trauma involved in being a part of Mobile Army Surgical Hospital. They survive insuperable odds with the help of practical jokes and fun.', 'mash.mp4', '', '70s'),
+(12, 'dukes.jpg', 'The Dukes of Hazzard', '', '', 'Just some good old boys, never meaning no harm. But cousins Bo and Luke Duke certainly have a way of finding trouble with the law everywhere they turn.', 'dukes.mp4', '', '70s'),
+(13, 'happy.jpg', 'Happy Days', '', '', 'Set in 1950s and 1960s Milwaukee, this series tells the story of the Cunningham family -- father Howard, mother Marion, son Richie and daughter Joanie.', 'happy.mp4', '', '70s'),
+(14, 'family.jpg', 'All in the Family', '', '', 'The lead character, Archie Bunker, is a loudmouthed, uneducated bigot who believes in every stereotype he has ever heard. His wife, Edith, is sweet but not the sharpest knife in the drawer. ', 'family.mp4', '', '70s'),
+(15, 'angels.jpg', 'Charlie\'s Angels', '', '', 'The show that ushered in the phrase \"jiggle TV\" features three beautiful police academy-trained private detectives whose cases always seem to require that they don bikinis, evening gowns or other sexy clothing.', 'angels.mp4', '', '70s'),
+(16, 'cheers.jpg', 'Cheers', '', '', 'A group of people from different paths of life meet at Cheers, a bar run by Sam in Boston. They share their experiences while working and drinking at the bar.', 'cheers.mp4', '', '80s'),
+(17, 'miami.jpg', 'Miami Vice', '', '', 'This series is largely remembered for the stylish clothes Detectives Sonny Crockett and Ricardo Tubbs wore, the soundtrack, and its distinct visuals.', 'miami.mp4', '', '80s'),
+(18, 'ateam.jpg', 'The A-Team', '', '', 'A team of ex-special forces soldiers on the lam from the military police (even though they didn\'t really commit the crime for which they\'d been imprisoned) leaves a trail of explosions in its wake.', 'ateam.jpg', '', '80s'),
+(19, 'house.jpg', 'Full House', '', '', 'Danny is a widower who is raising his three little girls after the death of his wife. But he has help from his musician brother-in-law, Jesse Katsopolis, and his best friend, comedian Joey Gladstone.', 'house.mp4', '', '80s'),
+(20, 'simpsons.jpg', 'The Simpsons', '', '', 'Working-class father Homer Simpson and his dysfunctional family deal with comical situations and the ups-and-downs of life in the town of Springfield.', 'simpsons.mp4', '', '80s'),
+(21, 'prince.jpg', 'The Fresh Prince of Bel-Air', '', '', 'Will Smith more or less plays himself in this good-natured NBC sitcom. As the show\'s popular theme song explains, fictional Will\'s mom sends him away from his rough Philadelphia neighborhood to live with wealthy Uncle Phil and Aunt Vivian in Bel-Air.', 'prince.mp4', '', '90s'),
+(22, 'friends.jpg', 'Friends', '', '', 'Follow the lives of six reckless adults living in Manhattan, as they indulge in adventures which make their lives both troublesome and happening.', 'friends.mp4', '', '90s'),
+(23, '70s.jpg', 'That \'70s Show', '', '', 'Eric, a high school student, and his group of teenage friends struggle to lead purposeful lives whilst going through the tumultuous phase of adolescence.', '70s.mp4', '', '90s'),
+(24, 'xfiles.jpg', 'The X-Files', '', '', 'Conspiracy theorist Fox Mulder and realist Dana Scully pull out all the stops as FBI special agents to investigate and get to the bottom of inexplicable paranormal cases.', 'xfiles.mp4', '', '90s'),
+(25, 'seinfeld.jpg', 'Seinfeld', '', '', 'Stand-up comedian Jerry Seinfeld wrestles with life\'s most perplexing yet trivial questions with his eccentric friends George, Elaine and Kramer.', 'seinfeld.mp4', '', '90s');
 
 -- --------------------------------------------------------
 
@@ -1517,13 +1523,13 @@ ALTER TABLE `tbl_mov_studio`
 -- AUTO_INCREMENT for table `tbl_music`
 --
 ALTER TABLE `tbl_music`
-  MODIFY `music_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `music_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `tbl_shows`
 --
 ALTER TABLE `tbl_shows`
-  MODIFY `show_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `show_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `tbl_studio`
