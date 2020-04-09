@@ -9,7 +9,7 @@ export default {
         <h1>The Media Player Component</h1>
 
         <div class="mediaCont">
-        <video  autoplay controls muted :src="'video/' + currentMovie.movies_trailer" class="mediaPlayerVideo"></video>
+        <video  autoplay controls :src="'video/' + currentMovie.movies_trailer" class="mediaPlayerVideo"></video>
         </div>
         
         </div>
