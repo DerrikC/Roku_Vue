@@ -6,10 +6,17 @@ export default {
 
     template: `
     <div class="container">
-        <h1>The Media Player Component</h1>
+        <h1 class="media-title">{{currentMovie.movies_title}}</h1>
+        <p class="media-details" v-html="currentMovie.movies_storyline"></p>
 
         <div class="mediaCont">
-        <video  autoplay controls :src="'video/' + currentMovie.movies_trailer" class="mediaPlayerVideo"></video>
+            <video width="80%" left="50%" autoplay controls :src="'video/' + currentMovie.movies_trailer" class="mediaPlayerVideo"></video>
+        </div>
+
+        <div id="movieBtns">
+            <img src="images/like-btn.svg" alt="Like Button">
+            <img src="images/share-btn.svg" alt="Share Button">
+            <img src="images/comment-btn.svg" alt="Comment Button">
         </div>
         
         </div>

@@ -4,8 +4,8 @@ export default {
 
     template: `
     <section class="topContent">
-    <div class="video-overlay"></div>
-    <div class="video-overlay-back"></div>
+        <div class="video-overlay"></div>
+        <div class="video-overlay-back"></div>
     
         <div class="infoCont">
         <div class="row">
@@ -14,7 +14,11 @@ export default {
                 <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
                 <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
                 <span class="media-year">{{currentMediaDetails.movies_year}}</span>
-
+                <div id="movieBtns">
+                    <img src="images/like-btn.svg" alt="Like Button">
+	                <img src="images/share-btn.svg" alt="Share Button">
+                    <img src="images/comment-btn.svg" alt="Comment Button">
+                </div>
             </div>
         </div>
            
