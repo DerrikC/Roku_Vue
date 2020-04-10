@@ -8,21 +8,21 @@
 
     if(isset($_GET['filter'])){
 
-        //$tbl = 'tbl_movies';
-        $tbl2 = 'tbl_genre';
-        $tbl3 = 'tbl_mov_genre';
-        $col = 'movies_id';
-        $col2 = 'genre_id';
-        $col3 = 'genre_name';
-        $filter = $_GET['filter'];
+        $args = array(
+            'tbl' => $tbl,
+            'tbl2' => 'tbl_decade',
+            'tbl3' => 'tbl_mov_decade',
+            'col' => 'movies_id',
+            'col2' => 'decade_id',
+            'col3' => 'decade_name',
+            'filter' => $_GET['filter'],
+        );
 
-        $results = getMoviesByFilter($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter);
-
+        $results = getMoviesByFilter($args);
         echo json_encode($results);
 
     } else {
         $results = getAll($tbl);
-
         echo json_encode($results);
     }
 

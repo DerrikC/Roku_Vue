@@ -36,11 +36,12 @@ export default {
         
         <div class="decade-nav">
             <ul>
-              <li><a href="index.php?filter=50s" class="underline">50s</a></li>
-              <li><a href="index.php?filter=60s" class="underline">60s</a></li>
-              <li><a href="index.php?filter=70s" class="underline">70s</a></li>
-              <li><a href="index.php?filter=80s" class="underline">80s</a></li>
-              <li><a href="index.php?filter=90s" class="underline">90s</a></li>
+              <li><a href="50s" @click.prevent="filterMedia('50s')" class="underline">50s</a></li>
+              <li><a href="60s" @click.prevent="filterMedia('60s')" class="underline">60s</a></li>
+              <li><a href="70s" @click.prevent="filterMedia('70s')" class="underline">70s</a></li>
+              <li><a href="80s" @click.prevent="filterMedia('80s')" class="underline">80s</a></li>
+              <li><a href="90s" @click.prevent="filterMedia('90s')" class="underline">90s</a></li>
+              <li><a href="All" @click.prevent="retrieveVideoContent" class="underline">All</a></li>
             </ul>
             </div>
         
@@ -75,13 +76,26 @@ export default {
             this.$router.push({ name: "mediaPlayer", params: {currentMovie: item}});
         },
     
+        filterMedia(filter) {
+            // debugger;
+            let url = `./admin/index.php?media=movies&filter=${filter}`;
+
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    this.allRetrievedVideos = data;
+                    this.currentMediaDetails = data[0];
+                })
+
+        }, 
+
+
         retrieveVideoContent() {
             // fetch all the video content here (don't care about filtering, genre etc at this point)
             // debugger;
             
             if (localStorage.getItem("cachedVideo")) {
                 this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedVideo"));
-
                 this.currentMediaDetails = this.allRetrievedVideos[0];
 
             } else {
