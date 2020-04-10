@@ -42,12 +42,12 @@ function getMoviesByFilter($args)
 
     $results = $pdo->query($filterQuery);
 
-    echo $filterQuery;
-    exit;
+    // echo $filterQuery;
+    // exit;
 
     if ($results) {
-        return $results;
+        return ($results->fetchAll(PDO::FETCH_ASSOC));
     } else {
-        return 'There was a problem accessing this info';
+        return 'There was a problem accessing this FILTERING info ';
     }
 }
