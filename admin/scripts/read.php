@@ -51,3 +51,4 @@ function getMoviesByFilter($args)
         return 'There was a problem accessing this FILTERING info ';
     }
 }
+
