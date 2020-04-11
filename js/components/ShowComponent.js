@@ -1,6 +1,6 @@
 
 export default {
-    name: "TheAudioComponent",
+    name: "TheShowComponent",
 
     props: ['currentuser'],
 
@@ -51,7 +51,7 @@ export default {
         <div class="row">
             <div class="col-12 col-sm-9">
 
-                <h1> Music </h1>
+                <h1> Shows </h1>
                 <div class="thumb-wrapper clearfix">
                     <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" 
                     alt="media thumb" @mouseover="loadNewMovie(item)" @click="showMediaPlayer(item)" class="poster"> 
@@ -83,7 +83,7 @@ export default {
     
         filterMedia(filter) {
             // debugger;
-            let url = `./admin/index.php?media=movies&filter=${filter}`;
+            let url = `./admin/index.php?media=shows&filter=${filter}`;
 
             fetch(url)
                 .then(res => res.json())
@@ -104,7 +104,7 @@ export default {
                 this.currentMediaDetails = this.allRetrievedVideos[0];
 
             } else {
-                let url = `./admin/index.php?media=movies`;
+                let url = `./admin/index.php?media=shows`;
 
                 fetch(url) 
                     .then(res => res.json())

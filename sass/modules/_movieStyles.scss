@@ -1,9 +1,19 @@
 
 //THIS FILE HAS ASSORTED GLOBAL CHANGES CURRENTLY
-.mediaCont .moviePlayerVideo {
-  margin: 0 auto;
-  left: 50%;
+
+.mediaCont video{
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
+
+li svg {
+  color: #5E3687;
+}
+
+// .moviePlayerVideo {
+//   margin: 0 auto;
+// }
 
 a:link {
   text-decoration: none;
