@@ -38,9 +38,6 @@ $ git clone https://github.com/DerrikC/Roku_Vue.git
 
 Now after you have installed the project and imported the .sql file to your MAMP/WAMP server, you can open up the broswer of your choice and go live (http://localhost:8888/Roku_Vue/).
 
-
-## Development
-
 ## User Logins
 
 username: Picasso
@@ -48,6 +45,8 @@ password: password
 
 username: KID
 password: password
+
+## Development
 
 If you wish to contibute to this project, please feel free to add new updates or fixes that you see fit. Please follow the proper naming convention of branches '(dev/des).(Your Initials).(Job Completed)'. This project is built with [Sass](https://sass-lang.com/), so you will need to connect the Sass to the CSS. To do so, copy and paste the following into the project terminal window.
 
