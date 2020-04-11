@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 11, 2020 at 08:47 PM
+-- Generation Time: Apr 11, 2020 at 10:43 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.8
 
@@ -1270,7 +1270,7 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_avatar`, `user_permissions`, `user_admin`) VALUES
-(3, 'Pablo Picasso', 'Picasso', 'password', 'me@you.com', '2020-03-09 15:48:21', '::1', 'olaf', 5, 1),
+(3, 'Pablo Picasso', 'Picasso', 'password', 'me@you.com', '2020-03-09 15:48:21', '::1', 'avatar', 5, 1),
 (4, 'Kid', 'KID', 'password', 'me@ou.com', '2020-03-09 15:49:04', 'no', 'null', 3, 1);
 
 --
