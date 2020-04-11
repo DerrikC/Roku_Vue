@@ -1,7 +1,7 @@
 ![rokuLogo](images/roku_Readme.svg)
 
 # ROKU Flashback Assignment
-![rokuMobile](images/mobile_rokuflashback_design-1.png)
+
 
 ## Description
 An audio and video app that uses queries and database assets. The user will be able to login and select either a parent section or a kids section, each with a unique theme. The parent section will require a password. Some content will be organized based on ratings and priveleges. 
@@ -30,17 +30,24 @@ $ git clone https://github.com/DerrikC/Roku_Vue.git
 ```
 
 
-2 - To see dynamic content you need to install the .sql file from the 'db' folder, this can be done in the Terminal or through phpMyAdmin. Create a new database and name it 'db_movies_roku' and then import the .sql file into the empty database. 
+2 - To see dynamic content you need to install the .sql file from the 'db' folder, this can be done in the Terminal or through phpMyAdmin. Create a new database and name it 'db_movies_roku_testing' and then import the .sql file into the empty database. 
 
 
 ### Deployment
 
 
-Now after you have installed the project and imported the .sql file to your MAMP/WAMP server, you can open up the broswer of your choice and [go live](http://localhost:8888/Roku_Vue/).
+Now after you have installed the project and imported the .sql file to your MAMP/WAMP server, you can open up the broswer of your choice and go live (http://localhost:8888/Roku_Vue/).
 
 
 ## Development
 
+## User Logins
+
+username: Picasso
+password: password
+
+username: KID
+password: password
 
 If you wish to contibute to this project, please feel free to add new updates or fixes that you see fit. Please follow the proper naming convention of branches '(dev/des).(Your Initials).(Job Completed)'. This project is built with [Sass](https://sass-lang.com/), so you will need to connect the Sass to the CSS. To do so, copy and paste the following into the project terminal window.
 

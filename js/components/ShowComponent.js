@@ -83,7 +83,7 @@ export default {
     
         filterMedia(filter) {
             // debugger;
-            let url = `./admin/index.php?media=shows&filter=${filter}`;
+            let url = `./admin/index.php?media=movies&filter=${filter}`;
 
             fetch(url)
                 .then(res => res.json())
@@ -104,7 +104,7 @@ export default {
                 this.currentMediaDetails = this.allRetrievedVideos[0];
 
             } else {
-                let url = `./admin/index.php?media=shows`;
+                let url = `./admin/index.php?media=movies`;
 
                 fetch(url) 
                     .then(res => res.json())
