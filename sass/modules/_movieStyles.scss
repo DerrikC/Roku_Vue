@@ -1,6 +1,9 @@
 
 //THIS FILE HAS ASSORTED GLOBAL CHANGES CURRENTLY
 
+#movieBtnCont {
+  padding:25px;
+}
 .mediaCont video{
   width: 100%;
   margin: 0;
@@ -9,6 +12,7 @@
 
 li svg {
   color: #5E3687;
+  cursor: pointer;
 }
 
 // .moviePlayerVideo {

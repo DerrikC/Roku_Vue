@@ -3,6 +3,7 @@ import AllUsersComponent from './components/AllUsersComponent.js';
 import LoginComponent from './components/LoginComponent.js';
 import UserHomeComponent from './components/UserHomeComponent.js';
 import MediaPlayerComponent from './components/MediaPlayerComponent.js';
+import ShowComponent from './components/ShowComponent.js';
 
 (() => {
   let router = new VueRouter({
@@ -12,7 +13,8 @@ import MediaPlayerComponent from './components/MediaPlayerComponent.js';
       { path: '/login', name: "login", component: LoginComponent },
       { path: '/users', name: 'users', component: AllUsersComponent },
       { path: '/usershome', name: 'home', component: UserHomeComponent, props: true },
-      { path: '/mediaPlayer', name: 'mediaPlayer', component: MediaPlayerComponent, props: true }
+      { path: '/mediaPlayer', name: 'mediaPlayer', component: MediaPlayerComponent, props: true },
+      { path: '/shows', name: 'show', component: ShowComponent, props: true }
     ]
   });
 
