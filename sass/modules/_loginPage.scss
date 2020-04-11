@@ -1,18 +1,10 @@
 
+@import '_vars'; 
+
 
 .containerLogin {
     margin: 75px;
 }
-
-.signInForm {
- background-color: white;
- padding: 25px;
- width: 400px;
- margin: 0 auto;
-}
-
-
-@import '_vars'; 
 
 
  .signIn h1 {
@@ -33,6 +25,8 @@
         background: rgb(107,63,149);
         background: radial-gradient(circle, rgba(107,63,149,1) 0%, rgba(18,12,23,1) 100%);
         color: #333;
+        margin: 0;
+        padding: 0;
 }
 
 

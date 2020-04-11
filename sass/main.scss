@@ -14,14 +14,20 @@
 /*-------------------------------Mobile-------------------------------*/
 @media (max-width:445px) {
 
-
-    #app {
-        background-color: white;
-    }
-
     html, body {
         height: 100%;
     }
+
+    .media-details p{
+        font-size: 4px;
+    }
+
+    .signInForm {
+        background-color: white;
+        padding: 25px;
+        width: 200px;
+        margin: 0 auto;
+       }       
     
     a { 
         text-decoration: none; 
@@ -51,7 +57,7 @@
         // // background-color: white;
         // color: #333;
         background-color: white;
-        font-size: 16px;
+        font-size: 10px;
         font-family: arial, helvetica, sans-serif;
     }
     
@@ -203,6 +209,24 @@
     
     .show-scroller {display: inline-block !important; }
 
+    header{ 
+        position: absolute;
+        width: 445px;
+        padding: 15px;
+        background-color: white; 
+        color:black; 
+        -webkit-box-shadow: 0 6px 4px -4px black;
+        -moz-box-shadow: 0 6px 4px -4px black;
+        box-shadow: 0 6px 4px -4px black;
+        z-index: 4;
+        .row{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+    }
+    
+
 }
 /*-------------------------------Tablet-------------------------------*/
 @media (max-width:768px) and (min-width: 446px){
@@ -211,6 +235,13 @@
         height: 100%;
     }
     
+    .signInForm {
+        background-color: white;
+        padding: 25px;
+        width: 400px;
+        margin: 0 auto;
+    }     
+
     a { 
         text-decoration: none; 
     
@@ -232,7 +263,7 @@
         // // background-color: white;
         // color: #333;
         background-color: white;
-        font-size: 16px;
+        font-size: 12px;
         font-family: arial, helvetica, sans-serif;
     }
     
@@ -366,7 +397,7 @@
         display: flex;
         margin-top: 0px;
         margin-left: 0;
-        height: 250px;
+        height: 300px;
         right: 0;
         z-index: 2;
         position: fixed;
@@ -389,6 +420,24 @@
     
     .show-scroller {display: inline-block !important; }
 
+    header{ 
+        position: absolute;
+        width: 768px;
+        padding: 15px;
+        background-color: white; 
+        color:black; 
+        -webkit-box-shadow: 0 6px 4px -4px black;
+        -moz-box-shadow: 0 6px 4px -4px black;
+        box-shadow: 0 6px 4px -4px black;
+        z-index: 4;
+        .row{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+    }
+    
+
     
     }
 /*-------------------------------Desktop------------------------------*/
@@ -398,6 +447,13 @@
             height: 100%;
         }
         
+        .signInForm {
+            background-color: white;
+            padding: 25px;
+            width: 600px;
+            margin: 0 auto;
+        }     
+
         a { 
             text-decoration: none; 
         
@@ -573,5 +629,23 @@
         // }
         
         // .show-scroller {display: inline-block !important; }
+
+        header{ 
+            position: absolute;
+            width: 769px;
+            padding: 15px;
+            background-color: white; 
+            color:black; 
+            -webkit-box-shadow: 0 6px 4px -4px black;
+            -moz-box-shadow: 0 6px 4px -4px black;
+            box-shadow: 0 6px 4px -4px black;
+            z-index: 4;
+            .row{
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+            }
+        }
+        
     
     }

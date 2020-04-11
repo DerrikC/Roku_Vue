@@ -48,10 +48,26 @@ export default {
         <div class="lowerGallery">
         <div class="row">
             <div class="col-12 col-sm-9">
+
+                <h1> Movies </h1>
+                <div class="thumb-wrapper clearfix">
+                    <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" 
+                    alt="media thumb" @mouseover="loadNewMovie(item)" @click="showMediaPlayer(item)" class="poster" > 
+                </div>
+
+
+                <h1> Shows </h1>
                 <div class="thumb-wrapper clearfix">
                     <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" 
                     alt="media thumb" @mouseover="loadNewMovie(item)" @click="showMediaPlayer(item)" class="poster"> 
                 </div>
+
+                <h1> Music </h1>
+                <div class="thumb-wrapper clearfix">
+                    <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" 
+                    alt="media thumb" @mouseover="loadNewMovie(item)" @click="showMediaPlayer(item)" class="poster"> 
+                </div>
+
             </div>
         </div>
         </div>
